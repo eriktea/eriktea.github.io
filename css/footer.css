@@ -1,0 +1,135 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* ============================================
+   Footer - Ailar Style Custom Footer
+   ============================================ */
+
+/* Override default footer layout */
+.footer_custom_text {
+  text-align: center !important;
+  padding: 18px 0 10px !important;
+}
+
+/* Hide default copyright/framework since we replace them */
+#footer-wrap .copyright,
+#footer-wrap .framework-info {
+  display: none !important;
+}
+
+/* Top copyright line */
+.footer-custom-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}
+
+.footer-copyright i,
+.footer-copyright .fab,
+.footer-copyright .fas {
+  margin: 0 1px;
+  font-size: 12px;
+}
+
+/* Tag buttons row */
+.footer-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.footer-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 11px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.footer-tag:hover {
+  background: rgba(255, 255, 255, 0.13);
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.footer-tag i {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+/* Timer capsule */
+.footer-timer-capsule {
+  display: inline-block;
+  padding: 5px 18px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+  font-size: 12.5px;
+  letter-spacing: 0.4px;
+  line-height: 1.6;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Light mode */
+[data-theme='light'] .footer-copyright {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+[data-theme='light'] .footer-tag {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.07);
+  color: rgba(0, 0, 0, 0.45);
+}
+
+[data-theme='light'] .footer-tag:hover {
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.7);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme='light'] .footer-timer-capsule {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.55);
+  border-color: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-custom-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .footer-tags {
+    gap: 6px;
+  }
+
+  .footer-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+  }
+
+  .footer-timer-capsule {
+    font-size: 11px;
+    padding: 4px 14px;
+  }
+}

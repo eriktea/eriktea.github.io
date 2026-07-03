@@ -16,7 +16,7 @@
     "forever": "^4.0.3",
     "hexo": "^6.2.0",
     "hexo-admin": "^2.3.0",
-    "hexo-algoliasearch": "^1.0.0",
+    "hexo-algoliasearch": "^2.0.1",
     "hexo-bilibili-bangumi": "^1.8.8",
     "hexo-blog-encrypt": "^4.0.2",
     "hexo-butterfly-envelope": "^1.0.15",

@@ -1,0 +1,19 @@
+- title: 闲言碎语
+  subTitle: 一些碎碎念 ✨
+  tips: 思绪偶尔发发光
+  top_background: https://your.cdn.com/img/bg.jpg
+  buttonText: 回到首页
+  buttonLink: /
+  limit: 10
+  essay_list:
+    - content: 今天阳光真好，适合发呆☀️
+      date: 2025-07-09
+      from: 心情记录
+      address: 南京
+      image:
+        - /img/sunshine.jpg
+
+    - content: 看了一篇强化学习论文，好像稍微懂一点了
+      date: 2025-07-08
+      from: 学习笔记
+      link: https://arxiv.org/abs/1234.5678

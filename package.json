@@ -17,7 +17,7 @@
     "hexo": "^6.2.0",
     "hexo-admin": "^2.3.0",
     "hexo-algoliasearch": "^1.0.0",
-    "hexo-bilibili-bangumi": "^1.8.8",
+    "hexo-bilibili-bangumi": "^2.1.7",
     "hexo-blog-encrypt": "^4.0.2",
     "hexo-butterfly-envelope": "^1.0.15",
     "hexo-deployer-git": "^3.0.0",

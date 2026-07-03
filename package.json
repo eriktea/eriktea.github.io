@@ -14,7 +14,7 @@
     "@waline/vercel": "^1.19.3",
     "cheerio": "^1.0.0-rc.12",
     "forever": "^4.0.3",
-    "hexo": "^6.2.0",
+    "hexo": "^8.1.2",
     "hexo-admin": "^2.3.0",
     "hexo-algoliasearch": "^1.0.0",
     "hexo-bilibili-bangumi": "^1.8.8",

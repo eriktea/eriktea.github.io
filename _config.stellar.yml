@@ -1,0 +1,137 @@
+# # =================================================================
+# # 咕咕嘎嘎の小屋 - Stellar 背景图终极覆盖
+# # =================================================================
+
+# # 1. 全局样式背景
+# style:
+#   leftbar:
+#     background-image: url(/images/bg.jpg)
+#     background-opacity: 0.9
+#     blur-px: 0px
+#   site:
+#     background-image: url(/images/bg.jpg)
+#     blur-px: 0px
+
+# # 2. 默认缺省图覆盖（新版 Stellar 很多大图会走 default 逻辑）
+# default:
+#   cover: /images/bg.jpg
+#   banner: /images/bg.jpg
+
+# # 3. 首页/公共横幅覆盖
+# banner:
+#   background: /images/bg.jpg
+
+
+
+
+
+
+
+
+
+
+
+
+
+# =================================================================
+# 咕咕嘎嘎の小屋 - Stellar 官方标准大背景回归配置
+# =================================================================
+
+# =================================================================
+# 咕咕嘎嘎の小屋 - Stellar 官方标准大背景回归配置
+# =================================================================
+
+# 👤 1. 站点核心信息
+# site:
+#   avatar: /images/avatar.jpg
+
+# # 🎨 2. 全局样式与背景美化
+# style:
+#   # 🏢 左侧侧边栏背景（保持优雅的模糊度，不抢主体风头）
+#   leftbar:
+#     background-image: url(/images/bg3.jpg)
+#     background-opacity: 0.25 
+#     blur-px: 15px                        # 保持 15 像素磨砂玻璃模糊，文字极其清晰
+#     background-position: right bottom    # 锁定右下角
+  
+#   # 💻 整个网站的大背景（回归图一效果的核心！）
+#   site:
+#     background-image: url(/images/bg3.jpg) # 🌟 重新把大背景图传上去，拒绝惨白！
+#     blur-px: 0px                         # 保持大背景清晰，不灰蒙蒙
+
+
+
+# =================================================================
+# 咕咕嘎嘎の小屋 - Stellar 官方原生自定义完美同步版
+# =================================================================
+
+# 👤 1. 站点核心信息
+# site:
+#   avatar: /images/avatar.jpg
+
+# # 🎨 2. 全局样式与大背景定位
+# style:
+#   # 🏢 左侧侧边栏背景（保持优雅的模糊度，不抢主体风头）
+#   leftbar:
+#     background-image: url(/images/bg3.jpg)
+#     background-opacity: 0.25 
+#     blur-px: 15px                        
+#     background-position: right bottom    
+  
+#   # 💻 整个网站的大背景
+#   site:
+#     background-image: url(/images/bg3.jpg)
+#     blur-px: 0px                         
+
+#   # 🌟 官方专属原生自定义通道（不改源码、绝不报错、完美解决全屏切图！）
+#   # 这里的两行代码会强行告诉 Edge 浏览器：不管屏幕拉多宽，图片高度永远跟屏幕一样高，并且整体向左平移，把女孩完整露出来！
+#   custom:
+#     - 'body { background-size: auto 100vh !important; background-position: calc(100% - 60px) bottom !important; }'
+#     - 'html, .l_body, #content-wrap { background: none !important; background-color: transparent !important; }'
+
+# # 🖼️ 3. 缺省图与横幅覆盖
+# default:
+#   cover: /images/bg3.jpg
+#   banner: /images/bg3.jpg
+
+# banner:
+#   background: /images/bg3.jpg
+
+
+
+# ------------------------------------------------------------
+
+# =================================================================
+# 咕咕嘎嘎の小屋 - Stellar 官方配置（Edge/VS Code 极致平衡版）
+# =================================================================
+
+# =================================================================
+# 咕咕嘎嘎の小屋 - 终极视口穿透标准配置
+# =================================================================
+
+# =================================================================
+# 咕咕嘎嘎の小屋 - Stellar 官方大背景终极完美毕业版配置
+# =================================================================
+
+site:
+  avatar: /images/avatar.jpg
+
+style:
+  # 🏢 左侧侧边栏：微光磨砂玻璃，带有一点点朦胧夜景
+  leftbar:
+    background-image: url(/images/bg3.jpg)
+    background-opacity: 0.25 
+    blur-px: 15px                        
+    background-position: right bottom    
+  
+  # 💻 全站大背景（在这里微调收尾！）
+  site:
+    background-image: url(/images/bg3.jpg)
+    blur-px: 0px                         
+    
+    # 🌟 1. 锁死高度：不管屏幕多宽，图片高度雷打不动等于屏幕高（100vh），女孩绝不变成大头贴！
+    background-size: 'auto 100vh !important'
+    
+    # 🌟 2. 完美对齐：把原先太靠右的 95% 换成更温和的 78%。
+    # 这样女孩会优雅地待在内容大框的右后方，既不被切掉，也不会让右边显得太挤！
+    background-position: '78% bottom !important'

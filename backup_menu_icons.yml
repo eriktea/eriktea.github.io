@@ -1,0 +1,20 @@
+# Backup: original menu icons (before 2026-07-03)
+# Restore by replacing the menu section in _config.butterfly.yml with this
+
+menu:
+  主页: / || fas fa-home
+  学习: /study/ || fas fa-code
+  软件: /software/ || fa-brands fa-app-store-ios
+  ACG: /ACG/ || fas fa-heart
+  留言: /messageboard/ || fa-fw fas fa-comment-dots
+  文档 || fa-fw fas fa-book:
+    归档: /archives/ || fas fa-archive
+    标签: /tags/ || fas fa-tags
+    分类: /categories/ || fas fa-folder-open
+  媒体 || fas fa-list:
+    图库: /gallery/ || fa-fw fas fa-images
+    追番: /bangumis/ || fa-fw fab fa-youtube
+  友链: /link/ || fas fa-link
+  关于: /about/ || fa-solid fa-address-card
+  说说 || fas fa-feather-alt:
+    闲言碎语: /essay/ || fas fa-quote-right

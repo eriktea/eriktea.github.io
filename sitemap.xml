@@ -218,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://eriktea.github.io/2026/06/30/2026%E5%B9%B4%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</loc>
+    <loc>https://eriktea.github.io/2026/06/30/2026%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E8%BF%BD%E7%95%AA%E6%8E%A8%E8%8D%90/</loc>
     
     <lastmod>2026-07-03</lastmod>
     
@@ -227,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://eriktea.github.io/2026/06/30/2026%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E8%BF%BD%E7%95%AA%E6%8E%A8%E8%8D%90/</loc>
+    <loc>https://eriktea.github.io/2026/06/30/2026%E5%B9%B4%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/</loc>
     
     <lastmod>2026-07-03</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://eriktea.github.io/bangumis/index.html</loc>
+    <loc>https://eriktea.github.io/about/index.html</loc>
     
     <lastmod>2026-07-03</lastmod>
     
@@ -263,7 +263,7 @@
   </url>
   
   <url>
-    <loc>https://eriktea.github.io/about/index.html</loc>
+    <loc>https://eriktea.github.io/bangumis/index.html</loc>
     
     <lastmod>2026-07-03</lastmod>
     
@@ -308,27 +308,6 @@
 
   
   <url>
-    <loc>https://eriktea.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://eriktea.github.io/tags/%E6%95%88%E7%8E%87/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://eriktea.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://eriktea.github.io/tags/%E5%8A%A8%E6%BC%AB/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -344,6 +323,27 @@
   
   <url>
     <loc>https://eriktea.github.io/tags/ACG/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://eriktea.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://eriktea.github.io/tags/%E6%95%88%E7%8E%87/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://eriktea.github.io/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -371,6 +371,13 @@
   </url>
   
   <url>
+    <loc>https://eriktea.github.io/tags/cpp%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://eriktea.github.io/tags/AI/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -379,6 +386,13 @@
   
   <url>
     <loc>https://eriktea.github.io/tags/Codex/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://eriktea.github.io/tags/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -400,20 +414,6 @@
   
   <url>
     <loc>https://eriktea.github.io/tags/%E8%B8%A9%E5%9D%91/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://eriktea.github.io/tags/cpp%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://eriktea.github.io/tags/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -548,14 +548,14 @@
 
   
   <url>
-    <loc>https://eriktea.github.io/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://eriktea.github.io/categories/ACG/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://eriktea.github.io/categories/ACG/</loc>
+    <loc>https://eriktea.github.io/categories/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -569,14 +569,14 @@
   </url>
   
   <url>
-    <loc>https://eriktea.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
+    <loc>https://eriktea.github.io/categories/%E5%B7%A5%E5%85%B7%E7%AE%B1/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://eriktea.github.io/categories/%E5%B7%A5%E5%85%B7%E7%AE%B1/</loc>
+    <loc>https://eriktea.github.io/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

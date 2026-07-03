@@ -11,7 +11,7 @@
     "version": "6.3.0"
   },
   "dependencies": {
-    "@waline/vercel": "^1.19.3",
+    "@waline/vercel": "^1.41.3",
     "cheerio": "^1.0.0-rc.12",
     "forever": "^4.0.3",
     "hexo": "^6.2.0",

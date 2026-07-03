@@ -1,0 +1,631 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>代理工具 | 咕咕嘎嘎&amp;小屋</title><meta name="author" content="Chiho"><meta name="copyright" content="Chiho"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="PC端和Mobile端的代理工具配置        前言PC端：Clash Verge Rev 是目前 Windows 和 macOS 平台上最流行、界面最好看的 Clash 内核代理客户端之一。它不仅完美适配了最新的 Mihomo 内核，还以极其简约直观的 UI 设计赢得了众多用户的青睐。 Mob"><link rel="shortcut icon" href="/images/avatar.jpg"><link rel="canonical" href="https://eriktea.github.io/2026/07/03/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"简","msgToSimplifiedChinese":"繁"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '代理工具',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-07-04 01:45:58'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="/css/box_alpha.css"><link rel="stylesheet" href="/css/reading_progress.css"><link rel="stylesheet" href="/css/error_404.css"><link rel="stylesheet" href="/css/double_column.css"><link rel="stylesheet" href="/css/highlight.css"><link rel="stylesheet" href="/css/pinned_carousel.css"><link rel="stylesheet" href="/css/footer.css"><link rel="stylesheet" href="/css/theme_color.css"><link rel="stylesheet" href="/css/essay.css"><link rel="stylesheet" href="/css/tag_cloud.css"><link rel="stylesheet" href="/css/tag_cloud_page.css"><link rel="stylesheet" href="/css/flink.css"><link rel="stylesheet" href="/css/aside_beautify.css"><link rel="stylesheet" href="/css/post_beautify.css"><link rel="stylesheet" href="/css/software.css"><link rel="stylesheet" href="/css/study.css"><link rel="stylesheet" href="/css/acg.css"><link rel="stylesheet" href="/css/about.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="咕咕嘎嘎&小屋" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://raw.githubusercontent.com/eriktea/pixiv_picgo/main/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-star"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/study/"><i class="fa-fw fas fa-book-open"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/software/"><i class="fa-fw fas fa-gamepad"></i><span> 软件</span></a></div><div class="menus_item"><a class="site-page" href="/ACG/"><i class="fa-fw fas fa-wand-magic-sparkles"></i><span> ACG</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-fw fas fa-book"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-clock-rotate-left"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-bookmark"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-layer-group"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 追番</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 说说</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-quote-right"></i><span> 闲言碎语</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_90325048_p01.png')"><nav id="nav"><span id="blog-info"><a href="/" title="咕咕嘎嘎&amp;小屋"><span class="site-name">咕咕嘎嘎&amp;小屋</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-star"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/study/"><i class="fa-fw fas fa-book-open"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/software/"><i class="fa-fw fas fa-gamepad"></i><span> 软件</span></a></div><div class="menus_item"><a class="site-page" href="/ACG/"><i class="fa-fw fas fa-wand-magic-sparkles"></i><span> ACG</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-fw fas fa-book"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-clock-rotate-left"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-bookmark"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-layer-group"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 追番</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 说说</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-quote-right"></i><span> 闲言碎语</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">代理工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B7%A5%E5%85%B7%E7%AE%B1/">工具箱</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="代理工具"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 align="center">PC端和Mobile端的代理工具配置</h1>  
+
+
+
+
+<blockquote>
+<p><strong>前言</strong><br>PC端：Clash Verge Rev 是目前 Windows 和 macOS 平台上最流行、界面最好看的 Clash 内核代理客户端之一。它不仅完美适配了最新的 Mihomo 内核，还以极其简约直观的 UI 设计赢得了众多用户的青睐。</p>
+<p>Mobile端：NekoBox 是目前 Android 平台上最流行、功能最完善的 Sing-box 内核代理客户端之一。它支持订阅导入、TUN 模式、规则分流以及多种代理协议，同时拥有简洁易用的界面设计，能够满足绝大多数用户的日常使用需求。</p>
+<p>PC 端的 Clash Verge Rev 主要通过“系统代理”接管应用流量；Android 端的 NekoBox 则通常通过系统 VPN &#x2F; TUN 模式接管流量，两者的实现方式不同，但使用目标是一致的,这里暂不进行区别表述</p>
+<p>本文将详细教学这两款代理工具的安装、配置以及订阅导入方法。</p>
+</blockquote>
+<hr>
+<p>使用前准备</p>
+<p>在开始配置之前，建议先明确下面几个概念：</p>
+<ol>
+<li>客户端不提供节点，机场才提供节点</li>
+</ol>
+<p>像 Clash Verge Rev、NekoBox 这类软件，本质上只是代理客户端，负责导入配置、切换节点和接管网络流量；真正提供节点的是机场服务商。</p>
+<p>也就是说，如果你没有机场提供的订阅链接，单独安装客户端是无法直接使用代理的。</p>
+<ol start="2">
+<li>订阅链接是什么</li>
+</ol>
+<p>订阅链接通常是一段由机场提供的 URL，用于让客户端自动拉取：</p>
+<p>节点列表<br>分流规则<br>DNS &#x2F; 路由配置<br>策略组配置</p>
+<p>导入订阅后，客户端才会显示可用节点与规则。</p>
+<ol start="3">
+<li>规则模式和全局模式的区别</li>
+</ol>
+<p>常见的代理模式一般有两种：</p>
+<p>规则模式：按照订阅配置中的规则进行分流。通常表现为国内网站直连、国外网站走代理，但最终仍以订阅本身的规则配置为准。<br>全局模式：所有流量统一走代理，不再区分国内外网站。</p>
+<p>日常使用一般优先推荐 规则模式；只有在某些应用地区限制较严格、或者规则命中异常时，才临时切换为 全局模式 测试。</p>
+<hr>
+<h2 id="PC端配置（Clash-Verge-Rev）"><a href="#PC端配置（Clash-Verge-Rev）" class="headerlink" title="PC端配置（Clash Verge Rev）"></a>PC端配置（Clash Verge Rev）</h2><br>
+
+<h3 id="📥-客户端下载"><a href="#📥-客户端下载" class="headerlink" title="📥 客户端下载"></a>📥 客户端下载</h3><ul>
+<li><i class="fas fa-desktop"></i> <strong>Clash Verge Rev</strong>: <a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases">前往 GitHub 官方下载页面</a></li>
+</ul>
+<br>
+
+<p>点击下方对应版本，即可跳转至下载页面：</p>
+<p><strong>Windows 系统</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases"><span style="border-bottom: 2px solid #48dbfb; padding-bottom: 1px; color: inherit; text-decoration: none;">64位常用版本 (exe&#x2F;msi)</span></a></li>
+</ul>
+<p><strong>macOS 系统</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases"><span style="border-bottom: 2px solid #1dd1a1; padding-bottom: 1px; color: inherit; text-decoration: none;">M芯片版本 (dmg)</span></a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases"><span style="border-bottom: 2px solid #ff9f43; padding-bottom: 1px; color: inherit; text-decoration: none;">Intel芯片版本 (dmg)</span></a></li>
+</ul>
+<hr>
+<h3 id="🔗-导入订阅"><a href="#🔗-导入订阅" class="headerlink" title="🔗 导入订阅"></a>🔗 导入订阅</h3><ol>
+<li>打开已经安装好的 <strong>Clash Verge Rev</strong> 客户端</li>
+<li>在客户端界面左侧的导航菜单中,点击进入 <strong>Settings</strong> 页面，将’Language’从’English’切换成’中文’或’繁体中文’</li>
+<li>在客户端界面左侧的导航菜单中，点击进入 <strong>订阅</strong> 页面</li>
+<li>在界面顶部的输入框’订阅文件链接’中，粘贴机场的订阅链接，如果尚未有机场链接，可以看另一篇文章’自用机场推荐’</li>
+<li>点击输入框右侧的’导入’按钮</li>
+<li>导入成功后，即可在列表中看到刚刚添加的配置项目</li>
+<li>在列表中右键点击该文件，选择’更新’，如果会刷新，则代表配置可以被正常使用</li>
+</ol>
+<blockquote>
+<p><strong>💡 小提示</strong>：请务必妥善保管机场链接，<strong>切勿随意泄露给他人</strong>。一旦订阅链接泄露，其他人将能够通过该链接使用您的流量配额。</p>
+</blockquote>
+<hr>
+<h3 id="🚀-开启代理"><a href="#🚀-开启代理" class="headerlink" title="🚀 开启代理"></a>🚀 开启代理</h3><ol>
+<li>在左侧导航栏点击进入’代理’页面</li>
+<li>在顶部的代理模式选项中，建议选择’规则’模式（这会让国内网站直连，国外网站走代理）</li>
+<li>在左侧导航栏点击进入’代理’，选择一个延迟较低，状态较好的节点进行使用’如香港、日本、新加坡、马来西亚’</li>
+<li>在左侧导航栏的’设置’页面，找到’系统代理’,将其打开即可</li>
+<li>在完成上述所有配置步骤后，你可以点击此处 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5">测试代理连接是否正常</a> 以确认网络环境是否已成功接入,如果顺利的话，将会进入’维基百科的首页’，这样就代表着可以畅通无阻的访问国际互联网了</li>
+</ol>
+<hr>
+<h3 id="🛠️-常见问题"><a href="#🛠️-常见问题" class="headerlink" title="🛠️ 常见问题"></a>🛠️ 常见问题</h3><br>
+
+<p>Q1：开启代理后，国内网站无法访问或速度很慢</p>
+<p>可能原因：</p>
+<p>误切换成了 全局模式<br>当前订阅的规则配置不合理<br>所选节点本身质量较差</p>
+<p>处理方法：</p>
+<p>进入 代理 页面，确认当前是否为 规则模式<br>更换其他节点测试<br>更新订阅后重新尝试</p>
+<p>Q2：软件提示“订阅更新失败”或“连接超时”</p>
+<p>可能原因：</p>
+<p>当前网络本身无法访问机场订阅地址<br>订阅链接填写错误或已失效<br>客户端版本过旧，无法解析新配置</p>
+<p>处理方法：</p>
+<p>检查订阅链接是否完整、是否复制错误<br>更换网络环境后重试，例如切换手机热点<br>更新 Clash Verge Rev 到最新版本后再次尝试</p>
+<p>Q3：已经开启系统代理，但浏览器或软件依然不走代理</p>
+<p>可能原因：</p>
+<p>有其他代理工具、VPN 或安全软件冲突<br>某些应用本身不完全遵循系统代理<br>系统代理状态异常</p>
+<p>处理方法：</p>
+<p>关闭其他同类代理工具或 VPN 软件<br>在 Clash Verge Rev 中尝试重置系统代理<br>重启客户端后重新测试<br>如果问题仍存在，可考虑开启 TUN 模式</p>
+<p>Q4：TikTok、Copilot、OpenAI 等服务依然提示地区不可用</p>
+<p>可能原因：</p>
+<p>当前规则没有正确命中对应流量<br>所选节点地区不匹配或 IP 纯净度不足<br>浏览器缓存 &#x2F; Cookie 残留导致地区判断异常</p>
+<p>处理方法：</p>
+<p>检查相关服务对应的策略组是否已经走代理<br>如果不确定规则是否命中，可以临时切换到 全局模式 测试<br>更换其他地区节点，优先尝试质量更高、纯净度更好的节点<br>清理浏览器缓存、Cookie，或使用无痕模式重新测试</p>
+<p>Q5：导入订阅时提示配置解析失败</p>
+<p>可能原因：</p>
+<p>客户端版本或内核版本过旧<br>机场订阅格式更新，旧版本不兼容<br>订阅内容本身异常</p>
+<p>处理方法：</p>
+<p>优先更新 Clash Verge Rev 到最新版本<br>重新导入订阅<br>若仍无法解决，再联系机场客服确认订阅本身是否可用</p>
+<hr>
+<h2 id="Mobile端配置（NekoBox）"><a href="#Mobile端配置（NekoBox）" class="headerlink" title="Mobile端配置（NekoBox）"></a>Mobile端配置（NekoBox）</h2><br>
+
+<h3 id="📥-客户端下载-1"><a href="#📥-客户端下载-1" class="headerlink" title="📥 客户端下载"></a>📥 客户端下载</h3><ul>
+<li><i class="fas fa-mobile-alt"></i> <strong>NekoBox</strong>: <a target="_blank" rel="noopener" href="https://github.com/MatsuriDayo/NekoboxForAndroid/releases">GitHub 仓库</a></li>
+</ul>
+<p>进入仓库往下滑即可看到 <strong>‘NekoBox-1.x.x-arm64.v8a.apk’</strong> ,下载完直接安装即可</p>
+<hr>
+<h3 id="🔗-导入订阅-1"><a href="#🔗-导入订阅-1" class="headerlink" title="🔗 导入订阅"></a>🔗 导入订阅</h3><ol>
+<li>打开已经安装完成的Nekobox,点击<strong>左上角的按钮</strong>，在滑出的窗口中点击<strong>分组</strong></li>
+<li>在弹出的分组主界面，点击右上角的 ➕ 号按钮即可出现分组设置界面，分组名自定义即可</li>
+<li>随后将<strong>分组类型</strong>修改成<strong>订阅</strong>,即可看到下面增加了一个’订阅链接’,将机场的URL链接复制粘贴进这里，随后点击右上角的 √ 保存</li>
+<li>保存后会回到分组页面，可以看到新添加的订阅分组，点击<strong>更新</strong></li>
+</ol>
+<hr>
+<h3 id="🚀-开启VPN"><a href="#🚀-开启VPN" class="headerlink" title="🚀 开启VPN"></a>🚀 开启VPN</h3><ol>
+<li>在主界面选择一个节点后，点击底部连接按钮启动代理；首次连接时，Android 会弹出“是否允许 NekoBox 创建 VPN 连接”的系统提示，点击允许即可</li>
+<li>以上步骤全部完成后即可使用NekoBox正常的进行全球互联网访问了</li>
+</ol>
+<hr>
+<h3 id="🧭-路由设置建议"><a href="#🧭-路由设置建议" class="headerlink" title="🧭 路由设置建议"></a>🧭 路由设置建议</h3><p>在 NekoBox 左上角菜单中进入 路由 页面后，可以看到一系列开关和规则项。<br>这里不建议简单理解为“全部打开”，更合理的做法是按用途分别配置。</p>
+<p>下面是比较常见的几个选项说明：</p>
+<ol>
+<li>屏蔽 QUIC</li>
+</ol>
+<p>建议：可优先开启</p>
+<p>QUIC 是基于 UDP 的网络协议，部分网站或应用（例如 YouTube、Google 系服务）可能会优先走 QUIC。<br>在某些网络环境下，QUIC 可能导致分流异常、绕过代理或速度不稳定。</p>
+<p>如果你遇到以下情况，可以尝试开启 屏蔽 QUIC：</p>
+<p>YouTube 加载异常<br>某些 Google 服务代理效果不稳定<br>明明开了代理，但部分流量表现不正常</p>
+<ol start="2">
+<li>屏蔽广告</li>
+</ol>
+<p>建议：开启</p>
+<p>该选项会拦截一部分常见广告域名，减少广告请求。<br>虽然不能替代专业的广告拦截工具，但日常使用中通常是有帮助的。</p>
+<ol start="3">
+<li>屏蔽跟踪器</li>
+</ol>
+<p>建议：开启</p>
+<p>该选项主要用于拦截常见统计、埋点和跟踪域名，对减少后台追踪请求和提升隐私有一定帮助。</p>
+<ol start="4">
+<li>中国域名规则</li>
+</ol>
+<p>建议：保持默认绕过（直连）</p>
+<p>它的作用是：当访问被识别为中国大陆域名的网站时，默认不走代理，而是直接连接。</p>
+<p>例如：</p>
+<p>国内新闻站<br>国内视频网站<br>国内常见服务网站</p>
+<p>对于日常使用来说，通常建议保留为 绕过，这样国内网站速度更稳定，也不会浪费代理流量。</p>
+<ol start="5">
+<li>中国 IP 规则</li>
+</ol>
+<p>建议：保持默认绕过（直连）</p>
+<p>这个规则和“中国域名规则”类似，不过它针对的是中国大陆 IP 地址。<br>一般情况下也建议保持为 绕过，让国内 IP 流量直接连接。</p>
+<ol start="6">
+<li>中国 Play 商店规则</li>
+</ol>
+<p>建议：按需开启</p>
+<p>这个选项主要用于控制 Google Play 商店 的流量是否通过代理。<br>如果你希望 Play 商店始终走代理，可以开启相关规则；如果没有特殊需求，保持默认即可。</p>
+<hr>
+<h3 id="🛠️-常见问题-1"><a href="#🛠️-常见问题-1" class="headerlink" title="🛠️ 常见问题"></a>🛠️ 常见问题</h3><br>
+
+<p>Q1：NekoBox 已经连接成功，但部分网站还是打不开</p>
+<p>可能原因：</p>
+<p>当前节点不可用或质量较差<br>路由规则命中异常<br>某些流量没有按预期走代理</p>
+<p>处理方法：</p>
+<p>更换其他节点测试<br>检查“路由”页面中中国域名 &#x2F; 中国 IP 规则是否被改乱<br>视情况尝试开启 屏蔽 QUIC<br>更新订阅后重新连接</p>
+<p>Q2：点击连接后一直无法建立 VPN</p>
+<p>可能原因：</p>
+<p>Android 系统没有授予 VPN 权限<br>手机系统限制了后台运行<br>当前节点或订阅本身异常</p>
+<p>处理方法：</p>
+<p>确认系统是否已经允许 NekoBox 创建 VPN<br>检查手机是否限制了 NekoBox 的后台运行、电池优化或联网权限<br>更换节点后重新连接<br>重启 NekoBox 或手机后再次尝试</p>
+<p>Q3：更新订阅时报错</p>
+<p>可能原因：</p>
+<p>订阅链接失效或填写错误<br>当前网络无法访问订阅地址<br>NekoBox 版本过旧</p>
+<p>处理方法：</p>
+<p>检查订阅链接是否填写正确<br>切换网络环境重新更新<br>更新 NekoBox 到较新的版本<br>若仍失败，再联系机场确认订阅状态</p>
+<p>Q4：国内网站也走代理，导致访问变慢</p>
+<p>可能原因：</p>
+<p>中国域名规则 &#x2F; 中国 IP 规则被改成了代理<br>当前路由配置不合理</p>
+<p>处理方法：</p>
+<p>回到 路由 页面<br>检查 中国域名规则 与 中国 IP 规则<br>一般建议将它们保持为 绕过（直连）</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://eriktea.github.io/">Chiho</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://eriktea.github.io/2026/07/03/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/">https://eriktea.github.io/2026/07/03/代理工具/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://eriktea.github.io" target="_blank">咕咕嘎嘎&小屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/">工具系列</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_90325048_p01.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechatpay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2026/07/03/Git/" title="Git的使用方式"><img class="cover" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_归溟幽灵鲨_2.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-07-04</div><div class="title">Git的使用方式</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">PC端和Mobile端的代理工具配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PC%E7%AB%AF%E9%85%8D%E7%BD%AE%EF%BC%88Clash-Verge-Rev%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">PC端配置（Clash Verge Rev）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A5-%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.1.1.</span> <span class="toc-text">📥 客户端下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%97-%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">🔗 导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-%E5%BC%80%E5%90%AF%E4%BB%A3%E7%90%86"><span class="toc-number">1.1.3.</span> <span class="toc-text">🚀 开启代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.4.</span> <span class="toc-text">🛠️ 常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mobile%E7%AB%AF%E9%85%8D%E7%BD%AE%EF%BC%88NekoBox%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">Mobile端配置（NekoBox）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%A5-%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">📥 客户端下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%97-%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">🔗 导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9A%80-%E5%BC%80%E5%90%AFVPN"><span class="toc-number">1.2.3.</span> <span class="toc-text">🚀 开启VPN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%AD-%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.2.4.</span> <span class="toc-text">🧭 路由设置建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%9B%A0%EF%B8%8F-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-1"><span class="toc-number">1.2.5.</span> <span class="toc-text">🛠️ 常见问题</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="footer_custom_text"><div class="footer-custom-wrapper">
+  <!-- copyright line -->
+  <div class="footer-custom-header">
+    <div class="footer-copyright">
+      &copy; 2026 咕咕嘎嘎の小屋
+    </div>
+  </div>
+  <!-- tag buttons -->
+  <div class="footer-tags">
+    <span class="footer-tag"><i class="fas fa-candy-cane"></i> 企鹅小屋</span>
+    <span class="footer-tag"><i class="fas fa-store"></i> 营业中</span>
+  </div>
+  <!-- timer capsule -->
+  <div class="footer-timer-capsule">
+    <span id="footer-timer-text">0 YEAR 0 DAYS 00:00:00</span>
+  </div>
+</div>
+</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'http://1.94.147.176:38080/',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'http://1.94.147.176:38080/',
+      region: 'ap-shanghai',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'http://1.94.147.176:38080/',
+        region: 'ap-shanghai',
+        pageSize: 5,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 1/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="720305850" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-lrctype="1" data-preload="none" data-autoplay="false" muted></div><script src="/js/pinned_carousel.js"></script><script src="/js/reading_progress.js"></script><script src="/js/aside_entrance.js"></script><script src="/js/reading_time_badge.js"></script><script src="/js/page_transition.js"></script><script src="/js/footer.js"></script><script src="/js/essay.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/gallery/wallpaper-for-universal/"]):not([href="/gallery/wallpaper-for-display/"]):not([href="/gallery/wallpaper-for-mac/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/null"},"display":{"position":"right","width":150,"height":300,"hOffset":33,"vOffset":-40},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>

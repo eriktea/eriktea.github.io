@@ -1,0 +1,292 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* ============================================
+   Post Article Page Beautification
+   ============================================ */
+
+/* --- Article wrapper --- */
+#post {
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+/* --- Article title --- */
+#post > #post-info {
+  border-radius: 0 0 14px 14px;
+}
+
+#post h1,
+#post h2,
+#post h3,
+#post h4,
+#post h5,
+#post h6 {
+  position: relative;
+  padding-left: 12px;
+  margin-top: 1.5em;
+}
+
+#post h1::before,
+#post h2::before,
+#post h3::before,
+#post h4::before,
+#post h5::before,
+#post h6::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: var(--btn-hover-color);
+  border-radius: 2px;
+}
+
+/* --- Paragraph spacing --- */
+#post .post-content p {
+  margin-bottom: 1.2em;
+  line-height: 1.85;
+}
+
+/* --- Blockquote beautification --- */
+#article-container blockquote {
+  border-left: 4px solid var(--btn-hover-color);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin: 1.2em 0;
+  background: rgba(73, 177, 245, 0.04);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+#article-container blockquote:hover {
+  background: rgba(73, 177, 245, 0.08);
+  transform: translateX(4px);
+}
+
+#article-container blockquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 48px;
+  color: var(--btn-hover-color);
+  opacity: 0.2;
+  font-family: Georgia, serif;
+}
+
+/* --- Horizontal rule --- */
+#article-container hr {
+  margin: 2em 0;
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--btn-hover-color), transparent);
+  opacity: 0.3;
+}
+
+/* --- Images in posts --- */
+#article-container img {
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+#article-container img:hover {
+  transform: scale(1.015);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Gallery group --- */
+#article-container figure.gallery-group {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+#article-container figure.gallery-group:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Tables --- */
+#article-container table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  margin: 1.5em 0;
+}
+
+#article-container thead {
+  background: rgba(73, 177, 245, 0.08);
+}
+
+#article-container th {
+  font-weight: 600;
+  border-color: rgba(73, 177, 245, 0.1);
+}
+
+#article-container td {
+  border-color: rgba(73, 177, 245, 0.06);
+}
+
+#article-container tbody tr:hover {
+  background: rgba(73, 177, 245, 0.04);
+}
+
+/* --- Post copyright --- */
+#post .post-copyright {
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 2em 0;
+  border: 1px solid rgba(73, 177, 245, 0.12);
+  transition: all 0.3s ease;
+}
+
+#post .post-copyright:hover {
+  border-color: rgba(73, 177, 245, 0.25);
+  box-shadow: 0 4px 16px rgba(73, 177, 245, 0.08);
+}
+
+#post .post-copyright .post-copyright-tag a,
+#post .post-copyright .post-copyright-info > span {
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+#post .post-copyright .post-copyright-tag a:hover,
+#post .post-copyright .post-copyright-info > span:hover {
+  background: rgba(73, 177, 245, 0.08);
+}
+
+/* --- Post reward --- */
+#post .reward-container {
+  margin: 2em 0;
+}
+
+#post .reward-container a {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#post .reward-container a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(73, 177, 245, 0.2);
+}
+
+/* --- QR code in reward --- */
+#post .reward-container .reward-qr-code img {
+  border-radius: 8px;
+  border: 2px solid rgba(73, 177, 245, 0.15);
+}
+
+/* --- Related posts --- */
+#post .related-post {
+  margin-top: 2em;
+}
+
+#post .related-post .related-post-list a {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#post .related-post .related-post-list a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Post navigation (prev/next) --- */
+#post .post-nav {
+  margin-top: 2em;
+}
+
+#post .post-nav .prev a,
+#post .post-nav .next a {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+#post .post-nav .prev a:hover,
+#post .post-nav .next a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* --- TOC (Table of Contents) --- */
+#card-toc .toc-content {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#card-toc .toc-content .toc-link {
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  padding: 4px 8px;
+  margin: 2px 0;
+}
+
+#card-toc .toc-content .toc-link:hover {
+  background: rgba(73, 177, 245, 0.08);
+  color: var(--btn-hover-color);
+}
+
+#card-toc .toc-content .toc-link.active {
+  background: rgba(73, 177, 245, 0.12);
+  color: var(--btn-hover-color);
+  border-left: 3px solid var(--btn-hover-color);
+  font-weight: 500;
+}
+
+/* --- Dark mode adjustments --- */
+[data-theme='dark'] #article-container blockquote {
+  background: rgba(73, 177, 245, 0.06);
+}
+
+[data-theme='dark'] #article-container blockquote:hover {
+  background: rgba(73, 177, 245, 0.1);
+}
+
+[data-theme='dark'] #article-container table thead {
+  background: rgba(73, 177, 245, 0.1);
+}
+
+[data-theme='dark'] #article-container tbody tr:hover {
+  background: rgba(73, 177, 245, 0.06);
+}
+
+[data-theme='dark'] #card-toc .toc-content .toc-link:hover {
+  background: rgba(73, 177, 245, 0.12);
+}
+
+[data-theme='dark'] #card-toc .toc-content .toc-link.active {
+  background: rgba(73, 177, 245, 0.15);
+}
+
+/* ============================================
+   Lazyload (图片懒加载) — 渐进式过渡
+   ============================================ */
+
+#article-container img[loading='lazy'] {
+  opacity: 0;
+  filter: blur(20px);
+  transform: scale(1.02);
+  transition: opacity 0.6s ease, filter 0.8s ease, transform 0.6s ease;
+}
+
+#article-container img[loading='lazy'].loaded {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+/* ============================================
+   Medium Zoom (图片放大)
+   ============================================ */
+
+.medium-zoom-overlay {
+  z-index: 9999;
+}
+
+.medium-zoom-image--opened {
+  border-radius: 8px;
+}

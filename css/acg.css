@@ -1,0 +1,205 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* ============================================
+   ACG Resource Page
+   Card grid layout — reuses software/study card styles
+   ============================================ */
+
+/* --- Container --- */
+.acg-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0 40px;
+}
+
+/* --- Category section --- */
+.acg-category {
+  margin-bottom: 48px;
+}
+
+.acg-category-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(73, 177, 245, 0.15);
+  color: var(--text-highlight-color, #333);
+}
+
+[data-theme='dark'] .acg-category-title {
+  border-bottom-color: rgba(73, 177, 245, 0.2);
+}
+
+.acg-category-title i {
+  color: #49b1f5;
+  font-size: 1.1em;
+}
+
+/* --- Card grid --- */
+.acg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* --- Individual card --- */
+.acg-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(153, 153, 153, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+[data-theme='light'] .acg-card {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .acg-card {
+  background: rgba(18, 18, 18, 0.72);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.acg-card:hover {
+  border-color: rgba(73, 177, 245, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .acg-card:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  border-color: rgba(73, 177, 245, 0.3);
+}
+
+/* --- Icon square --- */
+.acg-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.35s ease;
+}
+
+.acg-card:hover .acg-icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* --- Info area --- */
+.acg-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.acg-name {
+  font-weight: 600;
+  font-size: 0.95em;
+  color: var(--text-highlight-color, #333);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-theme='dark'] .acg-name {
+  color: #ddd;
+}
+
+.acg-desc {
+  font-size: 0.78em;
+  color: #888;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-theme='dark'] .acg-desc {
+  color: #777;
+}
+
+/* --- Category badge --- */
+.acg-badge {
+  flex-shrink: 0;
+  font-size: 0.68em;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(73, 177, 245, 0.08);
+  color: #49b1f5;
+  font-weight: 500;
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+[data-theme='dark'] .acg-badge {
+  background: rgba(73, 177, 245, 0.12);
+}
+
+/* --- R18 badge special style --- */
+.acg-badge:contains('R18') {
+  background: rgba(255, 71, 87, 0.1);
+  color: #ff4757;
+}
+
+[data-theme='dark'] .acg-badge:contains('R18') {
+  background: rgba(255, 71, 87, 0.15);
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  .acg-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .acg-card {
+    padding: 14px 16px;
+  }
+
+  .acg-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 13px;
+  }
+
+  .acg-category-title {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .acg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Entrance animation --- */
+.acg-card {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: acgCardIn 0.45s ease forwards;
+}
+
+@keyframes acgCardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,869 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>咕咕嘎嘎&amp;小屋 - 早安每一天！</title><meta name="author" content="Chiho"><meta name="copyright" content="Chiho"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="即使天无雨，我亦留此地"><link rel="shortcut icon" href="/images/avatar.jpg"><link rel="canonical" href="https://eriktea.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/16.png"/><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"简","msgToSimplifiedChinese":"繁"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '咕咕嘎嘎&小屋',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2026-07-04 01:49:06'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="/css/box_alpha.css"><link rel="stylesheet" href="/css/reading_progress.css"><link rel="stylesheet" href="/css/error_404.css"><link rel="stylesheet" href="/css/double_column.css"><link rel="stylesheet" href="/css/highlight.css"><link rel="stylesheet" href="/css/pinned_carousel.css"><link rel="stylesheet" href="/css/footer.css"><link rel="stylesheet" href="/css/theme_color.css"><link rel="stylesheet" href="/css/essay.css"><link rel="stylesheet" href="/css/tag_cloud.css"><link rel="stylesheet" href="/css/tag_cloud_page.css"><link rel="stylesheet" href="/css/flink.css"><link rel="stylesheet" href="/css/aside_beautify.css"><link rel="stylesheet" href="/css/post_beautify.css"><link rel="stylesheet" href="/css/software.css"><link rel="stylesheet" href="/css/study.css"><link rel="stylesheet" href="/css/acg.css"><link rel="stylesheet" href="/css/about.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="咕咕嘎嘎&小屋" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://raw.githubusercontent.com/eriktea/pixiv_picgo/main/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-star"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/study/"><i class="fa-fw fas fa-book-open"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/software/"><i class="fa-fw fas fa-gamepad"></i><span> 软件</span></a></div><div class="menus_item"><a class="site-page" href="/ACG/"><i class="fa-fw fas fa-wand-magic-sparkles"></i><span> ACG</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-fw fas fa-book"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-clock-rotate-left"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-bookmark"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-layer-group"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 追番</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 说说</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-quote-right"></i><span> 闲言碎语</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: url(/images/bg3.jpg) fixed no-repeat center bottom / cover"><nav id="nav"><span id="blog-info"><a href="/" title="咕咕嘎嘎&amp;小屋"><span class="site-name">咕咕嘎嘎&amp;小屋</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-star"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/study/"><i class="fa-fw fas fa-book-open"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/software/"><i class="fa-fw fas fa-gamepad"></i><span> 软件</span></a></div><div class="menus_item"><a class="site-page" href="/ACG/"><i class="fa-fw fas fa-wand-magic-sparkles"></i><span> ACG</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-fw fas fa-book"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-clock-rotate-left"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-bookmark"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-layer-group"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 追番</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 说说</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-quote-right"></i><span> 闲言碎语</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">咕咕嘎嘎&amp;小屋</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/eriktea" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:hrq2297897489@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/12764212" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/qq.jpg" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/wechat.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2026/07/03/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/" title="代理工具"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_90325048_p01.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="代理工具"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/03/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/" title="代理工具"><i class="fas fa-thumbtack sticky"></i>代理工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7%E7%AE%B1/">工具箱</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/">工具系列</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/03/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">PC端和Mobile端的代理工具配置  
+
+
+
+
+
+前言PC端：Clash Verge Rev 是目前 Windows 和 macOS 平台上最流行、界面最好看的 Clash 内核代理客户端之一。它不仅完美适配了最新的 Mihomo 内核，还以极其简约直观的 UI 设计赢得了众多用户的青睐。
+Mobile端：NekoBox 是目前 Android 平台上最流行、功能最完善的 Sing-box 内核代理客户端之一。它支持订阅导入、TUN 模式、规则分流以及多种代理协议，同时拥有简洁易用的界面设计，能够满足绝大多数用户的日常使用需求。
+PC 端的 Clash Verge Rev 主要通过“系统代理”接管应用流量；Android 端的 NekoBox 则通常通过系统 VPN &#x2F; TUN 模式接管流量，两者的实现方式不同，但使用目标是一致的,这里暂不进行区别表述
+本文将详细教学这两款代理工具的安装、配置以及订阅导入方法。
+
+
+使用前准备
+在开始配置之前，建议先明确下面几个概念：
+
+客户端不提供节点，机场才提供节点
+
+像 Clash Verge Rev、NekoBox 这类软件，本质上 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/06/30/LeetCode%E7%83%AD%E9%A2%98%E5%88%B7%E9%A2%98%E9%A1%BA%E5%BA%8F%E6%8E%A8%E8%8D%90/" title="LeetCode 热题 Top 100 刷题顺序推荐"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_96145490_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode 热题 Top 100 刷题顺序推荐"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/06/30/LeetCode%E7%83%AD%E9%A2%98%E5%88%B7%E9%A2%98%E9%A1%BA%E5%BA%8F%E6%8E%A8%E8%8D%90/" title="LeetCode 热题 Top 100 刷题顺序推荐"><i class="fas fa-thumbtack sticky"></i>LeetCode 热题 Top 100 刷题顺序推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-30T16:00:00.000Z" title="发表于 2026-07-01 00:00:00">2026-07-01</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode/">LeetCode</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%88%B7%E9%A2%98/">刷题</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/06/30/LeetCode%E7%83%AD%E9%A2%98%E5%88%B7%E9%A2%98%E9%A1%BA%E5%BA%8F%E6%8E%A8%E8%8D%90/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">LeetCode 热题 Top 100 刷题顺序推荐
+别从第 1 题开始刷，那样你会倒在 Two Sum 前面。
+
+为什么要按顺序刷LeetCode 目前有 3000+ 题，但面试真正高频的不过百题。盲目刷题效率极低——做了 200 题 still 不会做动态规划的大有人在。
+关键：按知识点分组，先易后难，同类题刷够 3-5 道形成肌肉记忆，再进入下一个知识点。
+
+推荐刷题顺序第一阶段：数组与字符串（第 1-20 题）这是最基础的题型，面试中出现率最高。
+
+
+
+题号
+题目
+知识点
+
+
+
+1
+Two Sum
+哈希表
+
+
+3
+Longest Substring Without Repeating Characters
+滑动窗口
+
+
+11
+Container With Most Water
+双指针
+
+
+15
+3Sum
+双指针 + 去重
+
+
+42
+Trapping Rain Water
+双指针 &#x2F; 单调栈
+
+
+53
+Maximum Subarray
+动态规划
+
+
+56
+Merge Intervals
+排序 + 区间合并
+
+
+70
+Climbing Stairs
+动态规划入门
+
+
+核心 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/07/03/C++%E4%BA%8C%E5%8F%89%E6%A0%91%E8%AF%A6%E8%A7%A3/" title="C++二叉树详解"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_89703294_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++二叉树详解"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/03/C++%E4%BA%8C%E5%8F%89%E6%A0%91%E8%AF%A6%E8%A7%A3/" title="C++二叉树详解"><i class="fas fa-thumbtack sticky"></i>C++二叉树详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C/">C++</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C/">C++</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/03/C++%E4%BA%8C%E5%8F%89%E6%A0%91%E8%AF%A6%E8%A7%A3/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">C++ 二叉树详解一、什么是二叉树二叉树（Binary Tree）是每个节点最多有两个子树的树结构，通常称为左子树和右子树。它是很多高级数据结构（如二叉搜索树、AVL树、红黑树、堆等）的基础，也是算法面试中最高频的考点之一。
+1.1 常见术语
+
+
+术语
+说明
+
+
+
+节点的度
+该节点子树的个数
+
+
+叶子节点
+度为 0 的节点
+
+
+根节点
+没有父节点的节点
+
+
+子树
+任意节点及其所有后代构成子树
+
+
+节点的层次
+从根开始定义，根为第 1 层
+
+
+树的高度&#x2F;深度
+树中节点的最大层次
+
+
+满二叉树
+所有叶子节点都在同一层，且每个节点都有左右子节点
+
+
+完全二叉树
+除了最后一层，其他层都是满的，最后一层从左到右连续
+
+
+平衡二叉树
+左右子树高度差不超过 1
+
+
+二、基本结构定义2.1 递归定义1234567891011121314151617#include &lt;iostream&gt;#include &lt;queue&gt;#include &lt;stack&gt;#include &lt;algorithm&gt;#include &lt;climits&gt;using ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/07/03/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="C++基础知识总结"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_66956824_p0_4k.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++基础知识总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/03/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="C++基础知识总结">C++基础知识总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C/">C++</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/cpp%E5%9F%BA%E7%A1%80/">cpp基础</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/03/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+  
+    7e280913a2549548124f0811716655947c4048acaa10555d133ca347c7279cbfa5c8c63e88f4d8990c3767f0729101e8994a65e7bc2875b21ddaa797a428ede5d1a3bf431040ec4ab148002abbfd310eaf196e309975484563dbd43c346a47a13bd335f030da5e660b1b088c2090aeb282323571c20bee3b15a6fa6add00d1e1e9910958757c64b95d923c408a071d8ac35784161742ad731b7bf1087bd887660497d7eddd1d0fc419b66a9496fc166621d0cb1ba249def171661f3599b762c35640ddacd3bdaf7685296e14461dd06ab1917acb4f7f0301af58e1ca4ad7de15666c077fdb5b655d54fe0f4693aaf3fe4423a64381ad ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/07/03/Git/" title="Git的使用方式"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_归溟幽灵鲨_2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git的使用方式"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/03/Git/" title="Git的使用方式">Git的使用方式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7%E7%AE%B1/">工具箱</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/">工具系列</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/03/Git/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Git 深度使用指南：从数据模型到工程实践前言 大多数开发者使用 Git 的方式停留在记忆命令的阶段：add、commit、push、pull，按固定顺序执行。当冲突出现或历史需要改写时，往往靠搜索引擎和 Stack Overflow 临时救急。这种工作方式并非不行，但它把 Git 当成一个黑盒，而非一种可推理的工具。
+ 这篇文章不打算罗列命令，也不会从 git init 讲起。我们从一个更根本的问题开始：Git 到底在存什么？理解它的数据模型之后，分支、合并、变基、冲突解决都会退化为这个模型上的推论，而非需要死记硬背的操作。
+Git 的数据模型对象数据库 Git 的核心是一个内容寻址（content-addressable）的文件系统。所有东西——文件内容、目录结构、提交记录——都存储为不可变的对象，以 SHA-1 哈希为键。对象分为四种类型：
+
+blob：文件的完整内容，不含文件名和路径。同一个文件内容无论出现在多少个提交中，在 .git 里只存一份。
+tree：目录的快照，记录文件名、文件模式（权限）、以及指向 blob 或子 tree 的哈希引用。
+commit：一个提交元对象 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/07/03/%E5%B0%8F%E8%AE%B0/" title="个人唠唠叨叨"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_Miku_4k_12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="个人唠唠叨叨"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/03/%E5%B0%8F%E8%AE%B0/" title="个人唠唠叨叨">个人唠唠叨叨</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%97%A5%E8%AE%B0%E6%9C%AC/">日记本</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E4%B8%AA%E4%BA%BA%E6%97%A5%E8%AE%B0/">个人日记</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/03/%E5%B0%8F%E8%AE%B0/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">
+  
+    7bef76ed0dbf364d802a1fab522aba5479ad36633786f0909f35056f961b08b4af952efa9fa7772a8dd8a4a27cb6bc567079d79ed60b4f9941a4d2c2eddcf96d63b458f128643835f019b41d33521f31e97a47f5de4f5abecaa2d58ba23c708588af696d88abd6456e10c2144e8fdd059239d05a36b2a1bce916884cb9b283f003cdcd6f6a1433146caf5a15ceebbe5cc09acc78658460e447dc45816509d2e7e449f04c56d87e6ee1767e6d4e0913e373e26296773386cb1e5ac183a298129033807bc4545b46952fcb281f5ce20a4ea48890999ee24cf506458e960e
+  
+  
+    
+      
+      
+      
+        请输入密码=v=
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/07/03/%E5%9B%BE%E5%BA%8A/" title="GitHub + PicGo 搭建免费图床"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_8EF495B2-8F19-4295-93F8-405053C095EB-41315-0000118D4CA401A6.PNG" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GitHub + PicGo 搭建免费图床"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/03/%E5%9B%BE%E5%BA%8A/" title="GitHub + PicGo 搭建免费图床">GitHub + PicGo 搭建免费图床</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-03T16:00:00.000Z" title="发表于 2026-07-04 00:00:00">2026-07-04</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7%E7%AE%B1/">工具箱</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/GitHub/">GitHub</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/PicGo/">PicGo</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/03/%E5%9B%BE%E5%BA%8A/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">GitHub + PicGo 搭建免费图床
+用 GitHub 仓库当图床，配合 PicGo 一键上传，完全免费、稳定可靠。本教程从零开始，手把手教你搭一套属于自己的图床系统。
+
+
+为什么需要图床写博客、写笔记、写文档，都离不开图片。把图片直接存在本地会导致：
+
+换电脑后图片丢失
+文章迁移困难
+Markdown 文件体积越来越大
+
+图床就是把图片统一上传到一个稳定的服务器上，文章里用外链引用。好处是：
+
+文章只存链接，文件轻量
+图片集中管理，方便查找替换
+任何设备、任何平台都能访问
+
+
+方案选择市面上图床方案很多，按可靠性排序：
+
+
+
+方案
+费用
+稳定性
+推荐度
+
+
+
+GitHub + PicGo
+免费
+高
+⭐⭐⭐⭐⭐
+
+
+阿里云 OSS &#x2F; 腾讯云 COS
+付费
+极高
+⭐⭐⭐⭐
+
+
+七牛云
+免费额度
+中
+⭐⭐⭐
+
+
+.imgur
+免费
+中
+⭐⭐
+
+
+GitHub 方案的优势：完全免费、不限流量（公开仓库）、支持 PicGo 一键上传、配合 jsDelivr CDN 加速访问速度。
+
+一、创建 GitHub 仓库1.1 注册 GitHub前往 github.com 注册账号。已 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/07/02/Codex/" title="Codex 使用指南"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_94573417_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Codex 使用指南"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/02/Codex/" title="Codex 使用指南">Codex 使用指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-02T16:00:00.000Z" title="发表于 2026-07-03 00:00:00">2026-07-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%88%E7%8E%87/">效率</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/AI/">AI</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Codex/">Codex</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/02/Codex/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Codex 使用指南
+OpenAI 出品的 AI 编程工具，不只是聊天，它能直接帮你改代码、跑命令、处理文件。
+
+
+1. Codex 是什么Codex 是 OpenAI 推出的AI 编程助手，区别于传统的 ChatGPT 对话式交互，Codex 可以直接在你的项目目录中执行操作：
+
+读取和修改本地文件
+在终端执行命令
+帮你写代码、修 Bug、重构项目
+理解整个代码库的上下文
+
+简单说，它不像 ChatGPT 那样只”说”给你听，而是真的会”动手”帮你干活。
+
+2. 安装2.1 下载客户端前往 OpenAI Codex 官方下载页 下载。网页会自动检测你的系统（Windows &#x2F; macOS）并给出对应版本，新手推荐安装可视化版本，终端版本更适合有经验的开发者。
+
+注意：安装过程中会跳转到 Microsoft Store，需要科学上网，否则大概率安装失败。
+
+2.2 首次启动安装完成后首次打开是英文界面，直接关闭，在右下角系统托盘中找到 Codex 图标并退出，然后重新打开，就会变成中文界面了。
+登录方式有两种：
+
+ChatGPT 账号登录 — 需要 Plus 会员，调用次数有 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/07/02/LeetCode%E7%83%AD%E9%A2%98Top100%E9%80%90%E9%A2%98%E8%AF%A6%E8%A7%A3/" title="LeetCode 热题 Top 100 逐题详解"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_96145490_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="LeetCode 热题 Top 100 逐题详解"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/02/LeetCode%E7%83%AD%E9%A2%98Top100%E9%80%90%E9%A2%98%E8%AF%A6%E8%A7%A3/" title="LeetCode 热题 Top 100 逐题详解">LeetCode 热题 Top 100 逐题详解</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-02T16:00:00.000Z" title="发表于 2026-07-03 00:00:00">2026-07-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/LeetCode/">LeetCode</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%88%B7%E9%A2%98/">刷题</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E9%A2%98%E8%A7%A3/">题解</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/02/LeetCode%E7%83%AD%E9%A2%98Top100%E9%80%90%E9%A2%98%E8%AF%A6%E8%A7%A3/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">LeetCode 热题 Top 100 逐题详解
+对应刷题顺序推荐篇，每道题给出详细思路、手把手推导、完整代码、复杂度分析和易错点提醒。建议先自己写一遍，再看答案。
+
+
+第一阶段：数组与字符串1. Two Sum（1）题目：给定一个整数数组 nums 和一个目标值 target，找出数组中和为目标值的两个整数，返回它们的下标。
+暴力解法：两层循环，枚举所有配对。时间复杂度 O(n²)。面试写这个大概率被挂。
+优化思路：遍历一次，对每个元素 nums[i]，我们需要的另一个数是 target - nums[i]。如果这个数之前见过，直接返回结果。关键是要快速查找——哈希表可以把查找时间从 O(n) 降到 O(1)。
+手推示例：
+1234nums = [2, 7, 11, 15], target = 9i=0, num=2: 需要 9-2=7，hashmap 里没有 → 存 &#123;2: 0&#125;i=1, num=7: 需要 9-7=2，hashmap 里有 2（下标 0）→ 返回 [0, 1]
+
+123456def twoSum(nums, target):    hashma ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/07/02/cpp/" title="C++ 基础入门"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_66956824_p0_4k.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++ 基础入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/02/cpp/" title="C++ 基础入门">C++ 基础入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-02T16:00:00.000Z" title="发表于 2026-07-03 00:00:00">2026-07-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/C/">C++</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/C/">C++</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%85%A5%E9%97%A8/">入门</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/02/cpp/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">C++ 基础入门
+本文记录 C++ 学习过程中的核心知识点，适合有编程基础但刚接触 C++ 的同学快速上手。
+
+
+1. C++ 简介C++ 是一门静态类型的、编译型的通用编程语言，由 Bjarne Stroustrup 在贝尔实验室开发。它在 C 语言的基础上增加了面向对象、泛型编程和元编程等特性，是目前系统编程、游戏开发、嵌入式领域的主流语言之一。
+C++ 的核心设计哲学是零开销抽象：你不需要为你没有使用到的特性付出额外的运行时代价。
+
+2. 基本语法2.1 Hello World123456#include &lt;iostream&gt;int main() &#123;    std::cout &lt;&lt; &quot;Hello, C++!&quot; &lt;&lt; std::endl;    return 0;&#125;
+
+#include &lt;iostream&gt; 引入标准输入输出流库，std::cout 用于向标准输出打印内容，std::endl 输出换行并刷新缓冲区。
+2.2 变量与数据类型12345int age = 25;            ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/07/02/python%E5%9F%BA%E7%A1%80/" title="Python 基础入门"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_IMG_5758.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 基础入门"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/02/python%E5%9F%BA%E7%A1%80/" title="Python 基础入门">Python 基础入门</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-02T16:00:00.000Z" title="发表于 2026-07-03 00:00:00">2026-07-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python/">Python</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%85%A5%E9%97%A8/">入门</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Python/">Python</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/02/python%E5%9F%BA%E7%A1%80/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Python 基础入门
+Python 是一门简洁、易读、功能强大的编程语言。本文从实际使用角度出发，梳理 Python 的核心知识点。
+
+
+1. Python 是什么Python 是一门高级、解释型、动态类型的通用编程语言。它的设计哲学强调代码可读性，用缩进代替花括号作为代码块的分隔，这使得 Python 代码读起来像伪代码一样清晰。
+Python 在 Web 开发、数据分析、人工智能、自动化脚本、科学计算等领域都有广泛应用。你用的 pip、Anaconda、Jupyter Notebook 背后的主力语言就是 Python。
+
+2. 变量与数据类型Python 是动态类型语言，变量无需声明类型，直接赋值即可：
+1234567891011name = &quot;Alice&quot;        # 字符串age = 25              # 整数height = 1.68         # 浮点数is_student = True     # 布尔值nothing = None        # 空值# 列表（可变序列）fruits = [&quot;apple&qu ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/07/02/python%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98/" title="Python 爬虫入门与实战"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_IMG_5758.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python 爬虫入门与实战"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/02/python%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98/" title="Python 爬虫入门与实战">Python 爬虫入门与实战</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-02T16:00:00.000Z" title="发表于 2026-07-03 00:00:00">2026-07-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python/">Python</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Python/">Python</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%AE%9E%E6%88%98/">实战</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/02/python%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Python 爬虫入门与实战
+爬虫的本质是：模拟浏览器发送请求，解析网页提取你需要的数据。本文从基础讲到实战，三篇案例覆盖静态页、动态页和真实场景。
+
+
+一、爬虫基础1.1 爬虫是什么爬虫（Web Crawler）是一个自动获取网页内容的程序。它的工作流程很简单：
+1发送请求 → 获取网页内容 → 解析数据 → 保存结果
+
+1.2 核心工具
+
+
+工具
+用途
+
+
+
+requests
+发送 HTTP 请求，获取网页 HTML
+
+
+BeautifulSoup4
+解析 HTML，提取数据
+
+
+lxml
+更快的 HTML&#x2F;XML 解析器
+
+
+Selenium
+模拟浏览器，处理 JavaScript 渲染的页面
+
+
+pandas
+数据清洗和导出 Excel&#x2F;CSV
+
+
+安装依赖：
+1pip install requests beautifulsoup4 lxml pandas selenium
+
+1.3 基本流程123456789101112131415161718192021import requestsfrom bs4 import BeautifulSoup# 1. 发送 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/07/02/%E8%87%AA%E7%94%A8%E6%9C%BA%E5%9C%BA/" title="机场选择指南与自用推荐"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_97973036_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机场选择指南与自用推荐"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/07/02/%E8%87%AA%E7%94%A8%E6%9C%BA%E5%9C%BA/" title="机场选择指南与自用推荐">机场选择指南与自用推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-02T16:00:00.000Z" title="发表于 2026-07-03 00:00:00">2026-07-03</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%B7%A5%E5%85%B7%E7%AE%B1/">工具箱</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%88%E7%8E%87/">效率</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%9C%BA%E5%9C%BA/">机场</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E4%BB%A3%E7%90%86/">代理</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/07/02/%E8%87%AA%E7%94%A8%E6%9C%BA%E5%9C%BA/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">机场选择指南与自用推荐
+选机场的核心原则：稳定 &gt; 速度 &gt; 价格。便宜但跑路的不如贵一点但稳的。
+
+
+一、怎么选机场选机场不要只看价格，以下几个维度值得考虑：
+1. 节点质量
+节点数量：越多越好，覆盖的地区越广（港、日、美、新、韩等）
+线路类型：是否提供 IEPL&#x2F;IPLC 专线，这类线路延迟低、稳定性高
+Netflix &#x2F; YouTube 解锁：如果你有流媒体需求，确认节点是否支持解锁
+游戏加速：部分机场提供游戏专用节点，延迟更低
+
+2. 流量与套餐
+月付 vs 年付：月付灵活但单价高，年付便宜但风险大（建议先月付试用）
+流量包大小：根据日常使用量选择，轻度用户月付 10-30 元即可，重度用户可能需要 50 元以上
+是否限速：部分机场在高峰时段会限速，购买前确认
+
+3. 协议支持
+**Shadowsocks (SS)**：老牌协议，轻量稳定
+VMess：V2Ray 协议，功能丰富
+Trojan：伪装成 HTTPS，抗干扰能力强
+Hysteria2：新协议，基于 UDP，速度极快
+Clash &#x2F; Sing-box 客户端支持：推荐使用 Cl ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/06/30/2026%E5%B9%B4%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/" title="2026年程序员必备效率工具推荐"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_Miku_4k_11.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年程序员必备效率工具推荐"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/06/30/2026%E5%B9%B4%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/" title="2026年程序员必备效率工具推荐">2026年程序员必备效率工具推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-30T16:00:00.000Z" title="发表于 2026-07-01 00:00:00">2026-07-01</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%88%E7%8E%87/">效率</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/">软件推荐</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/06/30/2026%E5%B9%B4%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E6%8E%A8%E8%8D%90/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">2026年程序员必备效率工具推荐
+工欲善其事，必先利其器。这些工具我每天都在用。
+
+
+1. 开发工具VS Code — 编辑器之王
+插件推荐：
+C/C++ Extension Pack：C++ 开发必备
+GitHub Copilot：AI 辅助编程，效率翻倍
+Rainbow Brackets：彩虹括号，一眼看清嵌套
+Code Runner：一键运行代码片段
+Markdown All in One：Markdown 写作增强
+
+
+
+CLion — C++ 专业 IDE如果 VS Code 满足不了你，CLion 是 JetBrains 家族里最值得买的 IDE。代码分析、重构、调试一体化。
+Neovim — 终端编辑器配置好 LSP 和 Telescope 之后，Neovim 完全不输 IDE。适合喜欢键盘操作的同学。
+
+2. 终端工具Windows Terminal + oh-my-poshWindows 上最好的终端。配合 oh-my-posh 主题，git 分支、退出码一目了然。
+12345# 安装 oh-my-poshwinget install JanDeDobbeleer.O ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/06/30/2026%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E8%BF%BD%E7%95%AA%E6%8E%A8%E8%8D%90/" title="2026年7月新番追番推荐"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_归溟幽灵鲨_1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026年7月新番追番推荐"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/06/30/2026%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E8%BF%BD%E7%95%AA%E6%8E%A8%E8%8D%90/" title="2026年7月新番追番推荐">2026年7月新番追番推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-30T16:00:00.000Z" title="发表于 2026-07-01 00:00:00">2026-07-01</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ACG/">ACG</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8A%A8%E6%BC%AB/">动漫</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%95%AA%E5%89%A7%E6%8E%A8%E8%8D%90/">番剧推荐</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/ACG/">ACG</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/06/30/2026%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E8%BF%BD%E7%95%AA%E6%8E%A8%E8%8D%90/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">2026年7月新番追番推荐
+生命不息，追番不止 🍿
+
+
+七月新番一览1. 间谍过家家 第三季
+类型：喜剧 &#x2F; 动作 &#x2F; 家庭
+推荐理由：依然搞笑温馨。阿尼亚继续卖萌，黄昏继续装酷。暑期放松首选。
+期待指数：⭐⭐⭐⭐⭐
+
+2. 葬送的芙莉莲 第二季
+类型：奇幻 &#x2F; 冒险
+推荐理由：第一季封神。第二季进入”北地篇”，世界观更加宏大。魔法战斗 + 细腻情感描写。
+期待指数：⭐⭐⭐⭐⭐
+
+3. 怪兽8号 第二季
+类型：科幻 &#x2F; 动作
+推荐理由：日本自卫队打怪兽，设定有趣。动画制作精良，打戏流畅。
+期待指数：⭐⭐⭐⭐
+
+4. 魔法少女与恶曾是敌人
+类型：魔法 &#x2F; 恋爱
+推荐理由：敌我CP的经典套路，但编剧这次 apparently 想写正剧。反差感拉满。
+期待指数：⭐⭐⭐
+
+5. 拜托了，请和我做朋友吧
+类型：校园 &#x2F; 恋爱 &#x2F; 喜剧
+推荐理由：原创动画，不是轻改。轻松搞笑，适合吃饭的时候看。
+期待指数：⭐⭐⭐⭐
+
+
+个人追番表
+
+
+番剧
+状态
+评分
+
+
+
+间谍过家家 S3
+🟢 追番中
+9.0
+
+
+葬送的芙莉莲 S2
+🟢 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2026/06/30/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" title="从零搭建 Hexo 博客踩坑记录"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_Angel.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零搭建 Hexo 博客踩坑记录"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/06/30/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" title="从零搭建 Hexo 博客踩坑记录">从零搭建 Hexo 博客踩坑记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-30T16:00:00.000Z" title="发表于 2026-07-01 00:00:00">2026-07-01</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E4%BB%96/">其他</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Hexo/">Hexo</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%B8%A9%E5%9D%91/">踩坑</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/06/30/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">从零搭建 Hexo 博客踩坑记录
+理论上是”一次部署，永久托管”，但实际上……
+
+为什么选 Hexo
+纯静态，GitHub Pages 免费托管
+Markdown 写作，专注内容
+主题生态丰富（Butterfly 颜值高）
+插件多，想要什么功能基本都有
+
+踩坑记录1. 中文路径乱码现象：文章标题含中文，部署后 404。
+原因：Hexo 默认用 URL 编码处理中文，但 GitHub Pages 和某些主题不支持。
+解决：在 _config.yml 中设置：
+123permalink: :year/:month/:day/:title/# 或者permalink: posts/:title.html
+
+2. 图片不显示现象：Markdown 里的图片本地能看，部署后不显示。
+原因：相对路径的问题。
+解决：
+
+开启 post_asset_folder: true，把图片放在文章同名的文件夹里
+使用图床（推荐 PicList + 阿里云 OSS）
+
+3. 评论系统试了一圈评论系统：
+
+Disqus：需要翻墙，国内访问不了
+Valine：LeanCloud 国内版已经停止服务
+Waline：目 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2026/06/30/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/" title="Linux 常用命令速查表"><img class="post-bg" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_ecc64c64ba13687b74ec5d42f8eb7f7cd7fcd789.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux 常用命令速查表"></a></div><div class="recent-post-info"><a class="article-title" href="/2026/06/30/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/" title="Linux 常用命令速查表">Linux 常用命令速查表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-30T16:00:00.000Z" title="发表于 2026-07-01 00:00:00">2026-07-01</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:45:58.874Z" title="更新于 2026-07-04 01:45:58">2026-07-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Linux/">Linux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%91%BD%E4%BB%A4/">命令</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%BF%90%E7%BB%B4/">运维</a></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-comments"></i><a class="twikoo-count" href="/2026/06/30/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5%E8%A1%A8/#post-comment"><i class="fa-solid fa-spinner fa-spin"></i></a><span class="article-meta-label"> 条评论</span></span></div><div class="content">Linux 常用命令速查表
+常用命令不用背，但常用的几个必须形成肌肉记忆。
+
+
+文件操作1234567891011121314# 查看文件ls -la                    # 列出所有文件（含隐藏）ls -lh                    # 人类可读的文件大小tree                      # 目录树# 复制/移动/删除cp -r src/ dest/          # 递归复制目录mv old.txt new.txt        # 移动/重命名rm -rf folder/            # 删除目录（慎用！）# 查找文件find . -name &quot;*.cpp&quot;      # 查找所有 cpp 文件find / -size +100M        # 查找大于 100MB 的文件grep -r &quot;TODO&quot; .          # 递归搜索文本
+
+
+权限管理123chmod 755 script.sh       # rwxr-xr-xchmod +x script.sh    ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/eriktea/pixiv_picgo/main/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Chiho</div><div class="author-info__description">即使天无雨，我亦留此地</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">34</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/eriktea"><i class="fab fa-github"></i><span>我的GitHub主页</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/eriktea" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:hrq2297897489@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://space.bilibili.com/12764212" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/qq.jpg" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/wechat.jpg" target="_blank" title="Wechat"><i class="fab fa-weixin"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Cpp业余博主,咕咕嘎嘎爱好者,历史爱好者,欢迎友善交流~</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/07/03/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/" title="代理工具"><img src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_90325048_p01.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="代理工具"/></a><div class="content"><a class="title" href="/2026/07/03/%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7/" title="代理工具">代理工具</a><time datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/03/C++%E4%BA%8C%E5%8F%89%E6%A0%91%E8%AF%A6%E8%A7%A3/" title="C++二叉树详解"><img src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_89703294_p0.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++二叉树详解"/></a><div class="content"><a class="title" href="/2026/07/03/C++%E4%BA%8C%E5%8F%89%E6%A0%91%E8%AF%A6%E8%A7%A3/" title="C++二叉树详解">C++二叉树详解</a><time datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/03/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="C++基础知识总结"><img src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_66956824_p0_4k.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++基础知识总结"/></a><div class="content"><a class="title" href="/2026/07/03/C++%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" title="C++基础知识总结">C++基础知识总结</a><time datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/03/Git/" title="Git的使用方式"><img src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_归溟幽灵鲨_2.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git的使用方式"/></a><div class="content"><a class="title" href="/2026/07/03/Git/" title="Git的使用方式">Git的使用方式</a><time datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/07/03/%E5%B0%8F%E8%AE%B0/" title="个人唠唠叨叨"><img src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_Miku_4k_12.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="个人唠唠叨叨"/></a><div class="content"><a class="title" href="/2026/07/03/%E5%B0%8F%E8%AE%B0/" title="个人唠唠叨叨">个人唠唠叨叨</a><time datetime="2026-07-03T17:45:58.874Z" title="发表于 2026-07-04 01:45:58">2026-07-04</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.45em; color: rgb(187, 86, 178)">工具</a><a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 1.35em; color: rgb(63, 78, 183)">效率</a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/" style="font-size: 1.15em; color: rgb(36, 129, 70)">软件推荐</a><a href="/tags/%E5%8A%A8%E6%BC%AB/" style="font-size: 1.15em; color: rgb(91, 104, 29)">动漫</a><a href="/tags/%E7%95%AA%E5%89%A7%E6%8E%A8%E8%8D%90/" style="font-size: 1.15em; color: rgb(149, 118, 191)">番剧推荐</a><a href="/tags/ACG/" style="font-size: 1.15em; color: rgb(25, 98, 15)">ACG</a><a href="/tags/C/" style="font-size: 1.25em; color: rgb(0, 117, 34)">C++</a><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.15em; color: rgb(110, 161, 151)">数据结构</a><a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" style="font-size: 1.15em; color: rgb(165, 89, 165)">二叉树</a><a href="/tags/AI/" style="font-size: 1.15em; color: rgb(176, 181, 16)">AI</a><a href="/tags/Codex/" style="font-size: 1.15em; color: rgb(0, 164, 196)">Codex</a><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(147, 193, 142)">Hexo</a><a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.25em; color: rgb(16, 69, 47)">博客</a><a href="/tags/%E8%B8%A9%E5%9D%91/" style="font-size: 1.15em; color: rgb(140, 161, 134)">踩坑</a><a href="/tags/cpp%E5%9F%BA%E7%A1%80/" style="font-size: 1.15em; color: rgb(165, 113, 165)">cpp基础</a><a href="/tags/%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/" style="font-size: 1.25em; color: rgb(6, 63, 7)">工具系列</a><a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 1.25em; color: rgb(108, 23, 25)">算法</a><a href="/tags/LeetCode/" style="font-size: 1.25em; color: rgb(70, 29, 3)">LeetCode</a><a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 1.25em; color: rgb(27, 89, 180)">刷题</a><a href="/tags/%E9%A2%98%E8%A7%A3/" style="font-size: 1.15em; color: rgb(4, 41, 59)">题解</a></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2026-05-06T00:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">28.7k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-07-03T17:49:06.119Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="footer_custom_text"><div class="footer-custom-wrapper">
+  <!-- copyright line -->
+  <div class="footer-custom-header">
+    <div class="footer-copyright">
+      &copy; 2026 咕咕嘎嘎の小屋
+    </div>
+  </div>
+  <!-- tag buttons -->
+  <div class="footer-tags">
+    <span class="footer-tag"><i class="fas fa-candy-cane"></i> 企鹅小屋</span>
+    <span class="footer-tag"><i class="fas fa-store"></i> 营业中</span>
+  </div>
+  <!-- timer capsule -->
+  <div class="footer-timer-capsule">
+    <span id="footer-timer-text">0 YEAR 0 DAYS 00:00:00</span>
+  </div>
+</div>
+</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => { 
+  const getCommentUrl = () => {
+    const eleGroup = document.querySelectorAll('#recent-posts .article-title')
+    let urlArray = []
+    eleGroup.forEach(i=>{
+      urlArray.push(i.getAttribute('href'))
+    })
+    return urlArray
+  }
+
+  const getCount = () => {
+    const runTwikoo = () => {
+      twikoo.getCommentsCount({
+        envId: 'http://1.94.147.176:38080/',
+        region: 'ap-shanghai',
+        urls: getCommentUrl(),
+        includeReply: false
+      }).then(function (res) {
+        document.querySelectorAll('#recent-posts .twikoo-count').forEach((item,index) => {
+          item.textContent = res[index].count
+        })
+      }).catch(function (err) {
+        console.log(err)
+      })
+    }
+
+      if (typeof twikoo === 'object') {
+        runTwikoo()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+      }
+  }
+
+  window.pjax ? getCount() : window.addEventListener('load', getCount)
+
+})()</script><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["半盏屠苏犹未举，灯前小草写桃符","疏影横斜水清浅，暗香浮动月黄昏","且将新火试新茶，诗酒趁年华"])
+  } else {
+    document.getElementById("subtitle").textContent = "半盏屠苏犹未举，灯前小草写桃符"
+  }
+}
+typedJSFn.run(subtitleType)</script><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'http://1.94.147.176:38080/',
+        region: 'ap-shanghai',
+        pageSize: 5,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 1/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="720305850" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-lrctype="1" data-preload="none" data-autoplay="false" muted></div><script src="/js/pinned_carousel.js"></script><script src="/js/reading_progress.js"></script><script src="/js/aside_entrance.js"></script><script src="/js/reading_time_badge.js"></script><script src="/js/page_transition.js"></script><script src="/js/footer.js"></script><script src="/js/essay.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/gallery/wallpaper-for-universal/"]):not([href="/gallery/wallpaper-for-display/"]):not([href="/gallery/wallpaper-for-mac/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/null"},"display":{"position":"right","width":150,"height":300,"hOffset":33,"vOffset":-40},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script><script>"use strict";if("serviceWorker"in navigator){navigator.serviceWorker.register("service-worker.js").then((function(reg){reg.onupdatefound=function(){var installingWorker=reg.installing;installingWorker.onstatechange=function(){switch(installingWorker.state){case"installed":if(navigator.serviceWorker.controller){console.log("New or updated content is available.")}else{console.log("Content is now available offline!")}break;case"redundant":console.error("The installing service worker became redundant.");break}}}}))["catch"]((function(e){console.error("Error during service worker registration:",e)}))}</script></body></html>

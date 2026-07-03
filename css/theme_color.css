@@ -31,7 +31,11 @@
 }
 
 /* Pagination buttons */
-.pagination .page-number.current {
+#pagination .pagination {
+  display: flex;
+  justify-content: center;
+}
+#pagination .pagination .page-number.current {
   background: var(--btn-hover-color);
   border-color: var(--btn-hover-color);
 }

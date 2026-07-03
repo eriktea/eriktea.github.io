@@ -1,0 +1,38 @@
+/* ============================================
+   Reading Progress Bar
+   Thin sky-blue line at top of viewport
+   ============================================ */
+
+#reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 99999;
+  pointer-events: none;
+  background: transparent;
+}
+
+#reading-progress-bar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--btn-hover-color, #49b1f5);
+  border-radius: 0 2px 2px 0;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 8px rgba(73, 177, 245, 0.4);
+}
+
+/* Dark mode glow */
+[data-theme='dark'] #reading-progress-bar::before {
+  box-shadow: 0 0 10px rgba(73, 177, 245, 0.5);
+}
+
+/* Hide on small screens */
+@media screen and (max-width: 768px) {
+  #reading-progress-bar {
+    height: 2px;
+  }
+}

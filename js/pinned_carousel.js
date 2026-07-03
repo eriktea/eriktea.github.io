@@ -55,7 +55,7 @@
       // Cover image
       let coverHTML = '';
       if (coverImg) {
-        coverHTML = `<img src="${coverImg.src}" alt="${title}" loading="eager">`;
+        coverHTML = `<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="${coverImg.src}" alt="${title}" loading="eager">`;
       } else if (coverDiv) {
         const bg = coverDiv.getAttribute('style') || '';
         const match = bg.match(/background:\s*([^;]+)/);

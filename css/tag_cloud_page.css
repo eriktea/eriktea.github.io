@@ -1,0 +1,107 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* ============================================
+   Tags Page Beautification
+   Large pill tags with count badges + masonry-like layout
+   ============================================ */
+
+/* --- Page header area --- */
+#page.tag-list {
+  padding-top: 20px;
+}
+
+#page .tag-cloud-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+#page .tag-cloud-list.is-center {
+  justify-content: center;
+}
+
+/* --- Individual tag link --- */
+#page .tag-cloud-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  border-radius: 24px;
+  background: rgba(73, 177, 245, 0.06);
+  border: 1px solid rgba(73, 177, 245, 0.12);
+  color: #666 !important;
+  font-size: 15px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+[data-theme='dark'] #page .tag-cloud-list a {
+  background: rgba(73, 177, 245, 0.08);
+  border-color: rgba(73, 177, 245, 0.1);
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+#page .tag-cloud-list a:hover {
+  background: rgba(73, 177, 245, 0.14) !important;
+  border-color: rgba(73, 177, 245, 0.4) !important;
+  color: #49b1f5 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(73, 177, 245, 0.15);
+}
+
+[data-theme='dark'] #page .tag-cloud-list a:hover {
+  background: rgba(73, 177, 245, 0.2) !important;
+  color: #49b1f5 !important;
+  box-shadow: 0 4px 16px rgba(73, 177, 245, 0.2);
+}
+
+/* --- Tag count badge --- */
+#page .tag-cloud-list a::after {
+  content: attr(data-count);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: rgba(73, 177, 245, 0.1);
+  color: #49b1f5;
+  font-size: 11px !important;
+  font-weight: 600;
+  line-height: 1;
+}
+
+[data-theme='dark'] #page .tag-cloud-list a::after {
+  background: rgba(73, 177, 245, 0.15);
+  color: #49b1f5;
+}
+
+#page .tag-cloud-list a:hover::after {
+  background: rgba(73, 177, 245, 0.2);
+}
+
+/* --- Size variants for cloud effect --- */
+#page .tag-cloud-list a[data-size="1"] { font-size: 13px !important; }
+#page .tag-cloud-list a[data-size="2"] { font-size: 15px !important; }
+#page .tag-cloud-list a[data-size="3"] { font-size: 17px !important; }
+#page .tag-cloud-list a[data-size="4"] { font-size: 19px !important; font-weight: 600; }
+#page .tag-cloud-list a[data-size="5"] { font-size: 21px !important; font-weight: 700; }
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  #page .tag-cloud-list {
+    gap: 8px;
+  }
+
+  #page .tag-cloud-list a {
+    padding: 6px 14px;
+    font-size: 13px !important;
+  }
+
+  #page .tag-cloud-list a[data-size="4"] { font-size: 15px !important; }
+  #page .tag-cloud-list a[data-size="5"] { font-size: 16px !important; }
+}

@@ -1,0 +1,203 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* ============================================
+   Essay / Mood Page (闲言碎语)
+   Daily-style timeline, not article-style
+   ============================================ */
+
+/* Page header */
+.essay-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.essay-header h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  color: var(--font-color);
+}
+
+.essay-header .subtitle {
+  font-size: 14px;
+  color: rgba(153, 153, 153, 0.7);
+  margin: 0 0 10px;
+}
+
+.essay-header .tips {
+  font-size: 13px;
+  color: rgba(153, 153, 153, 0.5);
+  font-style: italic;
+}
+
+/* Timeline */
+.essay-timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.essay-timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(153, 153, 153, 0.15);
+}
+
+/* Individual entry */
+.essay-entry {
+  position: relative;
+  margin-bottom: 24px;
+  animation: essayFadeIn 0.5s ease;
+}
+
+@keyframes essayFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.essay-entry::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--btn-hover-color);
+  border: 2px solid var(--card-bg);
+  box-shadow: 0 0 0 2px rgba(73, 177, 245, 0.2);
+  z-index: 1;
+}
+
+.essay-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(153, 153, 153, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.essay-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Entry meta */
+.essay-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.essay-date {
+  font-size: 12px;
+  color: rgba(153, 153, 153, 0.6);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.essay-from {
+  font-size: 12px;
+  color: var(--btn-hover-color);
+  background: rgba(73, 177, 245, 0.08);
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.essay-address {
+  font-size: 12px;
+  color: rgba(153, 153, 153, 0.5);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Entry content */
+.essay-content {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--font-color);
+  margin: 0 0 12px;
+  word-break: break-word;
+}
+
+/* Entry images */
+.essay-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.essay-images img {
+  max-width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.essay-images img:hover {
+  transform: scale(1.03);
+}
+
+/* Entry link */
+.essay-link {
+  font-size: 13px;
+  color: var(--btn-hover-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.2s;
+}
+
+.essay-link:hover {
+  opacity: 0.75;
+}
+
+/* Empty state */
+.essay-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(153, 153, 153, 0.4);
+  font-size: 14px;
+}
+
+/* Back to home button */
+.essay-back-btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 8px 24px;
+  background: var(--btn-hover-color);
+  color: var(--btn-color);
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: opacity 0.25s;
+}
+
+.essay-back-btn:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .essay-timeline {
+    padding-left: 24px;
+  }
+
+  .essay-card {
+    padding: 14px 16px;
+  }
+
+  .essay-content {
+    font-size: 14px;
+  }
+}

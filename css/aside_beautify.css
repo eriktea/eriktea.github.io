@@ -1,0 +1,184 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* ============================================
+   Aside Card Glassmorphism Beautification
+   ============================================ */
+
+/* --- Base card enhancements --- */
+#aside-content .card-widget {
+  border-radius: 14px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(153, 153, 153, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#aside-content .card-widget:hover {
+  border-color: rgba(73, 177, 245, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Light mode */
+[data-theme='light'] #aside-content .card-widget {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Dark mode */
+[data-theme='dark'] #aside-content .card-widget {
+  background: rgba(18, 18, 18, 0.8);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* --- Author card --- */
+#aside-content .card-widget.card-info {
+  border-radius: 14px 14px 0 0;
+  border-bottom: none;
+}
+
+#aside-content .card-info .avatar-img {
+  border-radius: 50%;
+  border: 3px solid var(--btn-hover-color);
+  box-shadow: 0 2px 12px rgba(73, 177, 245, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#aside-content .card-info .avatar-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 20px rgba(73, 177, 245, 0.35);
+}
+
+#aside-content .card-info .author-info__name {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+#aside-content .card-info .author-info__description {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+#aside-content .card-info #card-info-btn {
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#aside-content .card-info #card-info-btn:hover {
+  background: var(--btn-hover-color) !important;
+  border-color: var(--btn-hover-color) !important;
+  transform: translateY(-1px);
+}
+
+/* --- Announcement card --- */
+#aside-content .card-widget.card-announcement {
+  border-radius: 0 0 14px 14px;
+  border-top: none;
+}
+
+#aside-content .card-announcement .announcement_content {
+  line-height: 1.6;
+}
+
+/* --- Recent posts card --- */
+#aside-content .card-widget.card-recent-post {
+  border-radius: 14px;
+}
+
+#aside-content .card-recent-post .aside-list-item {
+  border-radius: 8px;
+  transition: background 0.25s ease;
+  padding: 6px 0;
+}
+
+#aside-content .card-recent-post .aside-list-item:hover {
+  background: rgba(73, 177, 245, 0.05);
+}
+
+#aside-content .card-recent-post .thumbnail img {
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+#aside-content .card-recent-post .thumbnail img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Tags card --- */
+#aside-content .card-widget.card-tags {
+  border-radius: 14px;
+}
+
+/* --- Categories card --- */
+#aside-content .card-widget.card-categories {
+  border-radius: 14px;
+}
+
+/* --- Archives card --- */
+#aside-content .card-widget.card-archives {
+  border-radius: 14px;
+}
+
+/* --- Web info card --- */
+#aside-content .card-widget.card-webinfo {
+  border-radius: 14px;
+}
+
+#aside-content .card-webinfo .webinfo-item {
+  transition: color 0.2s ease;
+}
+
+/* --- Newest comments card --- */
+#aside-content .card-widget.card-newest-comment {
+  border-radius: 14px;
+}
+
+/* --- Pixiv card --- */
+#aside-content .card-widget.card-pixiv {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+#aside-content .card-pixiv iframe {
+  border-radius: 0 0 14px 14px;
+}
+
+/* --- Divider / HR between cards --- */
+#aside-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(73, 177, 245, 0.15), transparent);
+  margin: 0;
+}
+
+/* --- Headline icons --- */
+#aside-content .item-headline {
+  padding-left: 4px;
+}
+
+#aside-content .item-headline i {
+  margin-right: 6px;
+  transition: color 0.25s ease;
+}
+
+#aside-content .card-widget:hover .item-headline i {
+  color: var(--btn-hover-color);
+}
+
+/* --- Social icons --- */
+#aside-content .card-info-social-icons {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#aside-content .card-info-social-icons a {
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+#aside-content .card-info-social-icons a:hover {
+  background: rgba(73, 177, 245, 0.1);
+  transform: translateY(-2px);
+}
+
+/* --- Custom bottom self card --- */
+#aside-content .card-widget.card-bottom-self {
+  border-radius: 14px;
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>C++ 基础入门 | 咕咕嘎嘎&amp;小屋</title><meta name="author" content="Chiho"><meta name="copyright" content="Chiho"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="C++ 基础入门 本文记录 C++ 学习过程中的核心知识点，适合有编程基础但刚接触 C++ 的同学快速上手。   1. C++ 简介C++ 是一门静态类型的、编译型的通用编程语言，由 Bjarne Stroustrup 在贝尔实验室开发。它在 C 语言的基础上增加了面向对象、泛型编程和元编程等特性，"><link rel="shortcut icon" href="/images/avatar.jpg"><link rel="canonical" href="https://eriktea.github.io/2026/07/03/cpp/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="manifest" href="/pwa/manifest.json"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/img/32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":1,"translateDelay":0,"msgToTraditionalChinese":"简","msgToSimplifiedChinese":"繁"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'mediumZoom',
+  Snackbar: {"chs_to_cht":"你已切换为繁体中文","cht_to_chs":"你已切换为简体中文","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'C++ 基础入门',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-07-04 01:17:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><link rel="stylesheet" href="/css/box_alpha.css"><link rel="stylesheet" href="/css/reading_progress.css"><link rel="stylesheet" href="/css/error_404.css"><link rel="stylesheet" href="/css/double_column.css"><link rel="stylesheet" href="/css/highlight.css"><link rel="stylesheet" href="/css/pinned_carousel.css"><link rel="stylesheet" href="/css/footer.css"><link rel="stylesheet" href="/css/theme_color.css"><link rel="stylesheet" href="/css/essay.css"><link rel="stylesheet" href="/css/tag_cloud.css"><link rel="stylesheet" href="/css/tag_cloud_page.css"><link rel="stylesheet" href="/css/flink.css"><link rel="stylesheet" href="/css/aside_beautify.css"><link rel="stylesheet" href="/css/post_beautify.css"><link rel="stylesheet" href="/css/software.css"><link rel="stylesheet" href="/css/study.css"><link rel="stylesheet" href="/css/acg.css"><link rel="stylesheet" href="/css/about.css"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="咕咕嘎嘎&amp;小屋" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (true) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://raw.githubusercontent.com/eriktea/pixiv_picgo/main/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">18</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">36</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div><hr class="custom-hr"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-star"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/study/"><i class="fa-fw fas fa-book-open"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/software/"><i class="fa-fw fas fa-gamepad"></i><span> 软件</span></a></div><div class="menus_item"><a class="site-page" href="/ACG/"><i class="fa-fw fas fa-wand-magic-sparkles"></i><span> ACG</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-fw fas fa-book"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-clock-rotate-left"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-bookmark"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-layer-group"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 追番</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 说说</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-quote-right"></i><span> 闲言碎语</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_66956824_p0_4k.png')"><nav id="nav"><span id="blog-info"><a href="/" title="咕咕嘎嘎&amp;小屋"><span class="site-name">咕咕嘎嘎&amp;小屋</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-star"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/study/"><i class="fa-fw fas fa-book-open"></i><span> 学习</span></a></div><div class="menus_item"><a class="site-page" href="/software/"><i class="fa-fw fas fa-gamepad"></i><span> 软件</span></a></div><div class="menus_item"><a class="site-page" href="/ACG/"><i class="fa-fw fas fa-wand-magic-sparkles"></i><span> ACG</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa-fw fas fa-comment-dots"></i><span> 留言</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa-fw fas fa-book"></i><span> 文档</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-clock-rotate-left"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-bookmark"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-layer-group"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 媒体</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/gallery/"><i class="fa-fw fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-tv"></i><span> 追番</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa-solid fa-address-card"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-feather-alt"></i><span> 说说</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/essay/"><i class="fa-fw fas fa-quote-right"></i><span> 闲言碎语</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">C++ 基础入门</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-07-02T16:00:00.000Z" title="发表于 2026-07-03 00:00:00">2026-07-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-07-03T17:17:00.297Z" title="更新于 2026-07-04 01:17:00">2026-07-04</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/C/">C++</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="C++ 基础入门"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img" style="background-image: url('https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_66956824_p0_4k.png');"></div><article class="post-content" id="article-container"><h1 id="C-基础入门"><a href="#C-基础入门" class="headerlink" title="C++ 基础入门"></a>C++ 基础入门</h1><blockquote>
+<p>本文记录 C++ 学习过程中的核心知识点，适合有编程基础但刚接触 C++ 的同学快速上手。</p>
+</blockquote>
+<hr>
+<h2 id="1-C-简介"><a href="#1-C-简介" class="headerlink" title="1. C++ 简介"></a>1. C++ 简介</h2><p>C++ 是一门静态类型的、编译型的通用编程语言，由 Bjarne Stroustrup 在贝尔实验室开发。它在 C 语言的基础上增加了面向对象、泛型编程和元编程等特性，是目前系统编程、游戏开发、嵌入式领域的主流语言之一。</p>
+<p>C++ 的核心设计哲学是<strong>零开销抽象</strong>：你不需要为你没有使用到的特性付出额外的运行时代价。</p>
+<hr>
+<h2 id="2-基本语法"><a href="#2-基本语法" class="headerlink" title="2. 基本语法"></a>2. 基本语法</h2><h3 id="2-1-Hello-World"><a href="#2-1-Hello-World" class="headerlink" title="2.1 Hello World"></a>2.1 Hello World</h3><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"Hello, C++!"</span> &lt;&lt; std::endl;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>#include &lt;iostream&gt;</code> 引入标准输入输出流库，<code>std::cout</code> 用于向标准输出打印内容，<code>std::endl</code> 输出换行并刷新缓冲区。</p>
+<h3 id="2-2-变量与数据类型"><a href="#2-2-变量与数据类型" class="headerlink" title="2.2 变量与数据类型"></a>2.2 变量与数据类型</h3><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> age = <span class="number">25</span>;              <span class="comment">// 整数</span></span><br><span class="line"><span class="type">double</span> pi = <span class="number">3.14159</span>;       <span class="comment">// 双精度浮点数</span></span><br><span class="line"><span class="type">char</span> grade = <span class="string">'A'</span>;          <span class="comment">// 字符</span></span><br><span class="line"><span class="type">bool</span> is_student = <span class="literal">true</span>;    <span class="comment">// 布尔值</span></span><br><span class="line">std::string name = <span class="string">"Alice"</span>; <span class="comment">// 字符串（需要 #include &lt;string&gt;）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>C++ 是<strong>静态类型语言</strong>，变量必须先声明后使用，且类型在编译时确定。</p>
+<h3 id="2-3-条件与循环"><a href="#2-3-条件与循环" class="headerlink" title="2.3 条件与循环"></a>2.3 条件与循环</h3><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// if-else</span></span><br><span class="line"><span class="keyword">if</span> (age &gt;= <span class="number">18</span>) {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"成年了"</span> &lt;&lt; std::endl;</span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line">    std::cout &lt;&lt; <span class="string">"未成年"</span> &lt;&lt; std::endl;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// for 循环</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {</span><br><span class="line">    std::cout &lt;&lt; i &lt;&lt; <span class="string">" "</span>;  <span class="comment">// 输出: 0 1 2 3 4</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// while 循环</span></span><br><span class="line"><span class="type">int</span> n = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">while</span> (n &gt; <span class="number">0</span>) {</span><br><span class="line">    std::cout &lt;&lt; n-- &lt;&lt; <span class="string">" "</span>; <span class="comment">// 输出: 5 4 3 2 1</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="3-函数"><a href="#3-函数" class="headerlink" title="3. 函数"></a>3. 函数</h2><p>函数是 C++ 程序的基本构建单元。C++ 支持函数重载——多个函数可以同名，只要参数列表不同即可。</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>{</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数重载</span></span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">add</span><span class="params">(<span class="type">double</span> a, <span class="type">double</span> b)</span> </span>{</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="4-面向对象：类与对象"><a href="#4-面向对象：类与对象" class="headerlink" title="4. 面向对象：类与对象"></a>4. 面向对象：类与对象</h2><p>C++ 的面向对象特性包括<strong>封装、继承、多态</strong>三大支柱。</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> {</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    std::string name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">// 构造函数</span></span><br><span class="line">    <span class="built_in">Dog</span>(std::string n, <span class="type">int</span> a) : <span class="built_in">name</span>(n), <span class="built_in">age</span>(a) {}</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 成员函数</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">bark</span><span class="params">()</span> </span>{</span><br><span class="line">        std::cout &lt;&lt; name &lt;&lt; <span class="string">" 在叫！"</span> &lt;&lt; std::endl;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getAge</span><span class="params">()</span> </span>{</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    }</span><br><span class="line">};</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用</span></span><br><span class="line"><span class="function">Dog <span class="title">myDog</span><span class="params">(<span class="string">"旺财"</span>, <span class="number">3</span>)</span></span>;</span><br><span class="line">myDog.<span class="built_in">bark</span>();  <span class="comment">// 输出: 旺财 在叫！</span></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="5-智能指针"><a href="#5-智能指针" class="headerlink" title="5. 智能指针"></a>5. 智能指针</h2><p>C++11 引入了智能指针，解决了手动管理动态内存的痛点。最常用的是 <code>std::unique_ptr</code> 和 <code>std::shared_ptr</code>。</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;memory&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 独占所有权</span></span><br><span class="line"><span class="keyword">auto</span> ptr = std::<span class="built_in">make_unique</span>&lt;<span class="type">int</span>&gt;(<span class="number">42</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 共享所有权</span></span><br><span class="line"><span class="keyword">auto</span> ptr2 = std::<span class="built_in">make_shared</span>&lt;<span class="type">int</span>&gt;(<span class="number">100</span>);</span><br><span class="line"><span class="keyword">auto</span> ptr3 = ptr2;  <span class="comment">// 引用计数 +1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>优先使用智能指针而不是裸指针（<code>new</code>/<code>delete</code>），除非你有明确的原因。</p>
+<hr>
+<h2 id="6-STL-容器"><a href="#6-STL-容器" class="headerlink" title="6. STL 容器"></a>6. STL 容器</h2><p>C++ 标准模板库（STL）提供了一组高效的通用容器和算法，是日常开发中最常用的部分。</p>
+<table>
+<thead>
+<tr>
+<th>容器</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>std::vector</code></td>
+<td>动态数组，尾部插入 O(1)</td>
+<td>最常用，默认选择</td>
+</tr>
+<tr>
+<td><code>std::array</code></td>
+<td>固定大小数组</td>
+<td>编译期已知大小的场景</td>
+</tr>
+<tr>
+<td><code>std::string</code></td>
+<td>字符串容器</td>
+<td>文本处理</td>
+</tr>
+<tr>
+<td><code>std::map</code></td>
+<td>键值对，红黑树实现</td>
+<td>有序映射</td>
+</tr>
+<tr>
+<td><code>std::unordered_map</code></td>
+<td>哈希表实现</td>
+<td>无序映射，查找 O(1)</td>
+</tr>
+</tbody></table>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unordered_map&gt;</span></span></span><br><span class="line"></span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; nums = {<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>};</span><br><span class="line">nums.<span class="built_in">push_back</span>(<span class="number">6</span>);  <span class="comment">// 尾部插入</span></span><br><span class="line"></span><br><span class="line">std::unordered_map&lt;std::string, <span class="type">int</span>&gt; scores;</span><br><span class="line">scores[<span class="string">"Alice"</span>] = <span class="number">95</span>;</span><br><span class="line">scores[<span class="string">"Bob"</span>] = <span class="number">87</span>;</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="7-Lambda-表达式"><a href="#7-Lambda-表达式" class="headerlink" title="7. Lambda 表达式"></a>7. Lambda 表达式</h2><p>C++11 引入的 Lambda 让函数式编程风格成为可能：</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"></span><br><span class="line">std::vector&lt;<span class="type">int</span>&gt; nums = {<span class="number">3</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">9</span>};</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从小到大排序</span></span><br><span class="line">std::<span class="built_in">sort</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>(), [](<span class="type">int</span> a, <span class="type">int</span> b) {</span><br><span class="line">    <span class="keyword">return</span> a &lt; b;</span><br><span class="line">});</span><br><span class="line"></span><br><span class="line"><span class="comment">// 捕获外部变量</span></span><br><span class="line"><span class="type">int</span> threshold = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">auto</span> count = std::<span class="built_in">count_if</span>(nums.<span class="built_in">begin</span>(), nums.<span class="built_in">end</span>(), [threshold](<span class="type">int</span> n) {</span><br><span class="line">    <span class="keyword">return</span> n &gt; threshold;</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="8-C-20-新特性速览"><a href="#8-C-20-新特性速览" class="headerlink" title="8. C++20 新特性速览"></a>8. C++20 新特性速览</h2><p>如果你用的是较新的编译器，可以尝试 C++20 的一些实用特性：</p>
+<ul>
+<li><strong><code>std::format</code></strong> — 类型安全的字符串格式化</li>
+<li><strong><code>concepts</code></strong> — 泛型编程的约束机制</li>
+<li><strong><code>co_await</code> / 协程</strong> — 异步编程的新方式</li>
+<li><strong>Ranges</strong> — 更直观的容器操作链式调用</li>
+</ul>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;format&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line">std::string msg = std::format(<span class="string">"Hello, {}!"</span>, <span class="string">"World"</span>);</span><br><span class="line">std::cout &lt;&lt; msg &lt;&lt; std::endl;  <span class="comment">// 输出: Hello, World!</span></span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>C++ 的学习曲线确实陡峭，但掌握之后你会对内存管理、性能优化、程序执行模型有更深刻的理解。建议在学习过程中多写代码、多做实验，遇到不懂的就去查文档、看源码。</p>
+<blockquote>
+<p>记住：C++ 给你足够的 rope to hang yourself，但也能让你写出极其高效的代码。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://eriktea.github.io/">Chiho</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://eriktea.github.io/2026/07/03/cpp/">https://eriktea.github.io/2026/07/03/cpp/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://eriktea.github.io" target="_blank">咕咕嘎嘎&amp;小屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/C/">C++</a><a class="post-meta__tags" href="/tags/%E5%85%A5%E9%97%A8/">入门</a><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_66956824_p0_4k.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer=""></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechatpay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechatpay.jpg" alt="微信"></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2026/07/03/python%E5%9F%BA%E7%A1%80/" title="Python 基础入门"><img class="cover" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_IMG_5758.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-07-04</div><div class="title">Python 基础入门</div></div></a></div><div><a href="/2026/07/04/C++%E4%BA%8C%E5%8F%89%E6%A0%91%E8%AF%A6%E8%A7%A3/" title="C++二叉树详解"><img class="cover" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_89703294_p0.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-07-04</div><div class="title">C++二叉树详解</div></div></a></div><div><a href="/2026/07/03/python%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98/" title="Python 爬虫入门与实战"><img class="cover" src="https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/temp01_IMG_5758.png" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2026-07-04</div><div class="title">Python 爬虫入门与实战</div></div></a></div></div></div><hr class="custom-hr"><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content is-expand"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text">C++ 基础入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-C-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">1. C++ 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">2. 基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Hello-World"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 Hello World</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 变量与数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 条件与循环</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%87%BD%E6%95%B0"><span class="toc-number">1.3.</span> <span class="toc-text">3. 函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9A%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.4.</span> <span class="toc-text">4. 面向对象：类与对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88"><span class="toc-number">1.5.</span> <span class="toc-text">5. 智能指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-STL-%E5%AE%B9%E5%99%A8"><span class="toc-number">1.6.</span> <span class="toc-text">6. STL 容器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.7.</span> <span class="toc-text">7. Lambda 表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-C-20-%E6%96%B0%E7%89%B9%E6%80%A7%E9%80%9F%E8%A7%88"><span class="toc-number">1.8.</span> <span class="toc-text">8. C++20 新特性速览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">1.9.</span> <span class="toc-text">结语</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="footer_custom_text"><div class="footer-custom-wrapper">
+  <!-- copyright line -->
+  <div class="footer-custom-header">
+    <div class="footer-copyright">
+      © 2026 咕咕嘎嘎の小屋
+    </div>
+  </div>
+  <!-- tag buttons -->
+  <div class="footer-tags">
+    <span class="footer-tag"><i class="fas fa-candy-cane"></i> 企鹅小屋</span>
+    <span class="footer-tag"><i class="fas fa-store"></i> 营业中</span>
+  </div>
+  <!-- timer capsule -->
+  <div class="footer-timer-capsule">
+    <span id="footer-timer-text">0 YEAR 0 DAYS 00:00:00</span>
+  </div>
+</div>
+</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  btf.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'http://1.94.147.176:38080/',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'http://1.94.147.176:38080/',
+      region: 'ap-shanghai',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    GLOBAL_CONFIG_SITE.isPost && getCount()
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script>window.addEventListener('load', () => {
+  const changeContent = (content) => {
+    if (content === '') return content
+
+    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
+    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
+    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
+    content = content.replace(/<[^>]+>/g,"") // remove html tag
+
+    if (content.length > 150) {
+      content = content.substring(0,150) + '...'
+    }
+    return content
+  }
+
+  const getComment = () => {
+    const runTwikoo = () => {
+      twikoo.getRecentComments({
+        envId: 'http://1.94.147.176:38080/',
+        region: 'ap-shanghai',
+        pageSize: 5,
+        includeReply: true
+      }).then(function (res) {
+        const twikooArray = res.map(e => {
+          return {
+            'content': changeContent(e.comment),
+            'avatar': e.avatar,
+            'nick': e.nick,
+            'url': e.url + '#' + e.id,
+            'date': new Date(e.created).toISOString()
+          }
+        })
+
+        saveToLocal.set('twikoo-newest-comments', JSON.stringify(twikooArray), 1/(60*24))
+        generateHtml(twikooArray)
+      }).catch(function (err) {
+        const $dom = document.querySelector('#card-newest-comments .aside-list')
+        $dom.textContent= "无法获取评论，请确认相关配置是否正确"
+      })
+    }
+
+    if (typeof twikoo === 'object') {
+      runTwikoo()
+    } else {
+      getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(runTwikoo)
+    }
+  }
+
+  const generateHtml = array => {
+    let result = ''
+
+    if (array.length) {
+      for (let i = 0; i < array.length; i++) {
+        result += '<div class=\'aside-list-item\'>'
+
+        if (true) {
+          const name = 'data-lazy-src'
+          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
+        }
+        
+        result += `<div class='content'>
+        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
+        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
+        </div></div>`
+      }
+    } else {
+      result += '没有评论'
+    }
+
+    let $dom = document.querySelector('#card-newest-comments .aside-list')
+    $dom && ($dom.innerHTML= result)
+    window.lazyLoadInstance && window.lazyLoadInstance.update()
+    window.pjax && window.pjax.refresh($dom)
+  }
+
+  const newestCommentInit = () => {
+    if (document.querySelector('#card-newest-comments .aside-list')) {
+      const data = saveToLocal.get('twikoo-newest-comments')
+      if (data) {
+        generateHtml(JSON.parse(data))
+      } else {
+        getComment()
+      }
+    }
+  }
+
+  newestCommentInit()
+  document.addEventListener('pjax:complete', newestCommentInit)
+})</script><div class="aplayer no-destroy" data-id="720305850" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-listfolded="false" data-order="random" data-lrctype="1" data-preload="none" data-autoplay="false" muted=""></div><script src="/js/pinned_carousel.js"></script><script src="/js/reading_progress.js"></script><script src="/js/aside_entrance.js"></script><script src="/js/reading_time_badge.js"></script><script src="/js/page_transition.js"></script><script src="/js/footer.js"></script><script src="/js/essay.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/gallery/wallpaper-for-universal/"]):not([href="/gallery/wallpaper-for-display/"]):not([href="/gallery/wallpaper-for-mac/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async="" data-pjax="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/Violet.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":33,"vOffset":-40},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>

@@ -1,0 +1,25 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* ============================================
+   Click Show Text Effect
+   鼠标点击时显示自定义文字
+   ============================================ */
+
+.click-show-text {
+  position: fixed;
+  pointer-events: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--btn-hover-color);
+  z-index: 9999;
+  animation: clickTextFade 1.5s ease forwards;
+}
+
+@keyframes clickTextFade {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(1.2);
+  }
+}

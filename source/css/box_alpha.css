@@ -1,0 +1,118 @@
+/* ============================================
+   Homepage Article Card Frosted Glass (box_alpha)
+   Matches aside glassmorphism style
+   ============================================ */
+
+/* --- Homepage post card list items --- */
+#recent-posts .recent-post-item,
+#recent-posts > .recent-post-item,
+.page .card-widget {
+  border-radius: 14px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(153, 153, 153, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Light mode */
+[data-theme='light'] #recent-posts .recent-post-item,
+[data-theme='light'] #recent-posts > .recent-post-item,
+[data-theme='light'] .page .card-widget {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode */
+[data-theme='dark'] #recent-posts .recent-post-item,
+[data-theme='dark'] #recent-posts > .recent-post-item,
+[data-theme='dark'] .page .card-widget {
+  background: rgba(18, 18, 18, 0.72);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* Hover lift effect */
+#recent-posts .recent-post-item:hover,
+#recent-posts > .recent-post-item:hover,
+.page .card-widget:hover {
+  border-color: rgba(73, 177, 245, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] #recent-posts .recent-post-item:hover,
+[data-theme='dark'] #recent-posts > .recent-post-item:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Post item cover image --- */
+#recent-posts .recent-post-item .post_cover {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#recent-posts .recent-post-item .post_cover img {
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+#recent-posts .recent-post-item:hover .post_cover img {
+  transform: scale(1.04);
+}
+
+/* --- Post item content area --- */
+#recent-posts .recent-post-item .post-info {
+  padding: 16px 20px;
+}
+
+/* --- Post item title --- */
+#recent-posts .recent-post-item .post-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* --- Post item meta (date/category) --- */
+#recent-posts .recent-post-item .post-meta {
+  opacity: 0.65;
+  font-size: 0.85em;
+}
+
+/* --- Post item excerpt --- */
+#recent-posts .recent-post-item .post_excerpt,
+#recent-posts .recent-post-item .post_abstract {
+  color: rgba(128, 128, 128, 0.85);
+  font-size: 0.9em;
+  line-height: 1.65;
+  margin-top: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* --- Sticky post item (keep distinct) --- */
+#recent-posts .recent-post-item.sticky .post-title::before {
+  color: var(--btn-hover-color);
+}
+
+/* --- Archive page cards --- */
+#archive .archive-wrapper,
+#archive .archive-card {
+  border-radius: 14px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  transition: all 0.35s ease;
+}
+
+[data-theme='light'] #archive .archive-wrapper,
+[data-theme='light'] #archive .archive-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] #archive .archive-wrapper,
+[data-theme='dark'] #archive .archive-card {
+  background: rgba(18, 18, 18, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}

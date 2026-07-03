@@ -1,0 +1,204 @@
+/* ============================================
+   Custom Code Highlight Theme Enhancement
+   Based on mac theme + modern touches
+   ============================================ */
+
+/* --- Base code block container --- */
+#article-container figure.highlight {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1.2em 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.3s ease;
+}
+
+#article-container figure.highlight:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] #article-container figure.highlight {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='dark'] #article-container figure.highlight:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Language badge --- */
+figure.highlight .code .caption {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', 'Monaco', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* --- Gutter (line numbers) --- */
+#article-container figure.highlight .gutter {
+  background: rgba(0, 0, 0, 0.15);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#article-container figure.highlight .gutter pre {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#article-container figure.highlight .line {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+/* --- Code area padding & font --- */
+#article-container figure.highlight .code pre {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+#article-container figure.highlight pre,
+#article-container figure.highlight pre .line {
+  font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', 'SF Mono', 'Consolas', 'Monaco', monospace;
+  font-size: 13.5px;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
+}
+
+/* --- Active line highlight --- */
+#article-container figure.highlight .line.marked {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* --- Copy button styling --- */
+figure.highlight .highlight-tools {
+  border-radius: 0 0 0 6px;
+}
+
+/* --- Scrollbar styling for code blocks --- */
+#article-container figure.highlight pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+#article-container figure.highlight pre::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+#article-container figure.highlight pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+#article-container figure.highlight pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Dark mode scrollbar */
+[data-theme='dark'] #article-container figure.highlight pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme='dark'] #article-container figure.highlight pre::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Inline code styling --- */
+#article-container code:not(.highlight) {
+  background: rgba(27, 31, 35, 0.06);
+  color: #e74c3c;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+  font-size: 0.88em;
+  word-break: break-word;
+}
+
+/* Dark mode inline code */
+[data-theme='dark'] #article-container code:not(.highlight) {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ff6b6b;
+}
+
+/* --- Optimized syntax colors for mac theme --- */
+figure.highlight pre .comment { color: #676E95; font-style: italic; }
+figure.highlight pre .string,
+figure.highlight pre .value,
+figure.highlight pre .inheritance,
+figure.highlight pre .header,
+figure.highlight pre .ruby .symbol,
+figure.highlight pre .xml .cdata,
+figure.highlight pre .special,
+figure.highlight pre .formula { color: #C3E88D; }
+figure.highlight pre .variable,
+figure.highlight pre .attribute,
+figure.highlight pre .regexp,
+figure.highlight pre .ruby .constant,
+figure.highlight pre .xml .tag .title,
+figure.highlight pre .xml .pi,
+figure.highlight pre .xml .doctype,
+figure.highlight pre .html .doctype,
+figure.highlight pre .css .id,
+figure.highlight pre .tag .name,
+figure.highlight pre .css .class,
+figure.highlight pre .css .pseudo { color: #FF5370; }
+figure.highlight pre .number,
+figure.highlight pre .preprocessor,
+figure.highlight pre .literal,
+figure.highlight pre .params,
+figure.highlight pre .constant,
+figure.highlight pre .command { color: #F78C6C; }
+figure.highlight pre .built_in { color: #FFCB6B; }
+figure.highlight pre .keyword,
+figure.highlight pre .title,
+figure.highlight pre .css .hexcolor { color: #89DDFF; }
+figure.highlight pre .tag { color: #89DDDF; }
+figure.highlight pre .function,
+figure.highlight pre .python .decorator,
+figure.highlight pre .python .title,
+figure.highlight pre .ruby .function .title,
+figure.highlight pre .ruby .title .keyword,
+figure.highlight pre .perl .sub,
+figure.highlight pre .javascript .title,
+figure.highlight pre .coffeescript .title { color: #82AAFF; }
+figure.highlight pre .tag .attr,
+figure.highlight pre .javascript .function { color: #C792EA; }
+
+/* --- C++ specific keywords --- */
+figure.highlight pre .preprocessor,
+figure.highlight pre .preprocessor .keyword,
+figure.highlight pre .template_tag,
+figure.highlight pre .typename { color: #C792EA; }
+
+figure.highlight pre .cpp .namespace,
+figure.highlight pre .namespace { color: #FFCB6B; }
+
+/* --- Python specific --- */
+figure.highlight pre .python .decorator,
+figure.highlight pre .python .title { color: #82AAFF; }
+figure.highlight pre .python .built_in { color: #FFCB6B; }
+
+/* --- Shell / Bash specific --- */
+figure.highlight pre .shell .function,
+figure.highlight pre .bash .built_in { color: #82AAFF; }
+
+/* --- Table header (filename line) --- */
+figure.highlight .highlight-tools .code-lang {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 12px;
+}
+
+/* --- Diff / diff-highlight styles --- */
+figure.highlight pre .deletion {
+  color: #FF5370;
+  background: rgba(255, 83, 112, 0.08);
+}
+figure.highlight pre .addition {
+  color: #C3E88D;
+  background: rgba(195, 232, 141, 0.08);
+}

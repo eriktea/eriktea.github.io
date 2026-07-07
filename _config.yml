@@ -1,0 +1,402 @@
+# # Hexo Configuration
+# ## Docs: https://hexo.io/docs/configuration.html
+# ## Source: https://github.com/hexojs/hexo/
+
+# title: 咕咕嘎嘎の小屋           # 博客的標題 / 網站名稱（會顯示在瀏覽器分頁標籤和首頁最顯眼的地方）
+# subtitle: '一只香企鹅'         # 博客的副標題 / 網站座右銘（通常會顯示在主標題下方的一行小字，留空則不顯示）
+# description: '该网站主要是作为leetcode的C++比赛题目解法交流'      # 網站的簡介 / 描述（非常重要！雖然網頁上看不見，但搜索引擎如 Google 會抓取這裡的文字作為搜索結果的摘要）
+# keywords: 'LeetCode, C++, 演算法, 算法比賽, 題解'           # 網站的關鍵字（用於 SEO 搜索引擎優化，可以填寫多個關鍵字，用逗號隔開）
+# author: Chiho                 # 作者的名字（會顯示在文章的發表人、頁腳的版權聲明處）
+# language: zh-TW               # 網站的語系（目前已設置為繁體中文，主題自帶的按鈕、菜單和時間格式都會切換為繁體）
+# timezone: 'Asia/Taipei'       # 網站的時區（既然設定了繁體中文，強烈建議鎖定 'Asia/Taipei' 或 'Asia/Hong_Kong'，確保文章發表的本地時間絕不混亂）
+# avatar: /images/avatar.jpg    # 🌟 直接在这里加上你的头像路径！
+
+
+# # URL
+# ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+# url: http://example.com
+# permalink: :year/:month/:day/:title/
+# permalink_defaults:
+# pretty_urls:
+#   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+#   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# # Google Adsense (谷歌廣告)
+# # google_adsense:
+# #   enable: true
+# #   auto_ads: true
+# #   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+# #   client:
+# #   enable_page_level_ads: true
+
+# # butterfly_article_double_row: # 首页文章双侧栏显示开关
+# #   enable: true  
+
+# # Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)
+# # mask:
+# #   header: true
+# #   footer: true
+
+# # Directory
+# source_dir: source
+# public_dir: public
+# tag_dir: tags
+# archive_dir: archives
+# category_dir: categories
+# code_dir: downloads/code
+# i18n_dir: :lang 
+# skip_render:
+
+# # Writing
+# new_post_name: :title.md # File name of new posts
+# default_layout: post
+# titlecase: false # Transform title into titlecase
+# external_link:
+#   enable: true # Open external links in new tab
+#   field: site # Apply to the whole site
+#   exclude: ''
+# filename_case: 0
+# render_drafts: false
+# post_asset_folder: false
+# relative_link: false
+# future: true
+# syntax_highlighter: highlight.js
+# highlight:
+#   line_number: true
+#   auto_detect: false
+#   tab_replace: ''
+#   wrap: true
+#   hljs: false
+# prismjs:
+#   preprocess: true
+#   line_number: true
+#   tab_replace: ''
+
+# # Home page setting
+# # path: Root path for your blogs index page. (default = '')
+# # per_page: Posts displayed per page. (0 = disable pagination)
+# # order_by: Posts order. (Order by date descending by default)
+# index_generator:
+#   path: ''
+#   per_page: 10
+#   order_by: -date
+
+# # Category & Tag
+# default_category: uncategorized
+# category_map:
+# tag_map:
+
+# # Metadata elements
+# ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+# meta_generator: true
+
+# # Date / Time format
+# ## Hexo uses Moment.js to parse and display date
+# ## You can customize the date format as defined in
+# ## http://momentjs.com/docs/#/displaying/format/
+# date_format: YYYY-MM-DD
+# time_format: HH:mm:ss
+# ## updated_option supports 'mtime', 'date', 'empty'
+# updated_option: 'mtime'
+
+# # Pagination
+# ## Set per_page to 0 to disable pagination
+# per_page: 10
+# pagination_dir: page
+
+
+
+# # # 在根目录的 _config.yml 文件末尾添加
+# # encrypt:
+# #   enable: true
+# #   template: default  # 或者使用 butterfly 主题风格适配的配置
+# #   abstract: "这是一篇加密文章，请输入密码查看。" # 默认摘要
+# #   message: "请输入密码以查看内容"
+# #   wrong_pass_message: "密码错误，请重试。"
+
+
+# # Include / Exclude file(s)
+# ## include:/exclude: options only apply to the 'source/' folder
+# include:
+# exclude:
+# ignore:
+
+# # Extensions
+# ## Plugins: https://hexo.io/plugins/
+# ## Themes: https://hexo.io/themes/
+
+# # 初始主题
+# # theme: landscape
+# theme: butterfly
+# theme_config: true
+
+# # Deployment
+# ## Docs: https://hexo.io/docs/one-command-deployment
+
+
+
+
+# # deploy:
+# #   type: ''
+
+# # 使用git上传到github，将eriktea仓库的唯一密钥写入reposiory
+
+# deploy:
+#   type: git
+#   repository: https://ghp_ciq0iwC3C04a8Ts2zuexrYXxyj6omi01sjxY@github.com/eriktea/eriktea.github.io.git
+#   branch: main
+
+
+
+
+
+# # --------------------接下来下方都是功能性渲染开关------------------------------------  
+
+# search:
+#   path: ./public/search.xml # 索引文件的路径，相对于站点根目录
+#   field: post # 搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面
+#   format: html
+#   limit: 10000 # 限制搜索的条目数
+
+# # bilibili追番表
+# bangumi:
+#   enable: true 
+#   vmid: 12764212
+#   title: '生命不息，追番不止。'
+#   quote: 'NO ANIME, NO LIFE.'
+#   show: 1 #初始显示页面：0: 想看 , 1: 在看 , 2: 看过，默认为 1
+#   loading: '/img/bangumi-loading.gif'
+
+#  显示live2d
+live2d:
+  enable: true
+  scriptFrom: local # 默认
+  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+  debug: false # 调试, 是否在控制台输出日志
+  model:
+    use: live2d-widget-model-violet  #模型选择
+  display:
+    position: right   #模型位置
+    width: 150       #模型宽度
+    height: 300      #模型高度
+    hOffset: 33
+    vOffset: -40
+  mobile:
+    show: false      #是否在手机端显示
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ------------------------------分割线，以下皆是copy来的-----------------------------------------------------------------
+
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+title: 咕咕嘎嘎&小屋
+subtitle: 早安每一天！
+description: 即使天无雨，我亦留此地
+keywords: 
+author: Chiho
+language: zh-CN
+timezone: Asia/Shanghai
+
+# URL
+## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+url: https://eriktea.github.io/
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source # 资源文件夹，这个文件夹用来存放内容，例如我们用markdown编写的博文
+public_dir: public # 公共文件夹，这个文件夹用于存放生成的静态博客文件
+tag_dir: tags # 标签文件夹
+archive_dir: archives # 归档文件夹
+category_dir: categories # 分类文件夹
+code_dir: downloads/code # Include code 文件夹
+i18n_dir: :lang # 国际化（i18n）文件夹
+skip_render: # 跳过指定文件的渲染，您可使用 glob 来配置路径
+  - js/essay.js
+
+# Writing
+new_post_name: :title.md # 默认的新博文名称
+default_layout: post # 默认布局 
+titlecase: false # 把标题转换为 titlecase（titlecase指的是将每个单词首字母转换成大写）
+external_link:
+  enable: true # 在新标签中打开链接
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0 # 把文件名称转换为 (1) 小写或 (2) 大写, 0表示不变
+render_drafts: false # 是否显示草稿
+post_asset_folder: true # 是否启用资源文件夹（用来存放相对路径图片或文件）
+relative_link: false # 把链接改为与根目录的相对位址
+future: true
+highlight:
+  enable: true # 是否开启代码高亮
+  line_number: true # 是否增加代码行号
+  auto_detect: false # 自动判断代码语言
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: '' # 博客的默认路径
+  per_page: 30 # 每页博客数量上限
+  order_by: -date # 博客排序
+
+#archive分页每页显示文章数
+archive_generator:
+  per_page: 0
+#tag分页每页显示文章数
+tag_generator:
+  per_page: 0
+#category分页每页显示文章数
+category_generator: 
+  per_page: 0
+
+
+# Category & Tag
+default_category: uncategorized # 默认分类, uncategorized表示未分类
+category_map: # 分类别名
+tag_map: # 标签别名
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD # 博客日期格式
+time_format: HH:mm:ss # 博客时间格式
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 0 # 每页显示的文章量，如果设置值为0，则表示禁止分页
+pagination_dir: page # 分页目录
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude:
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+#RSS订阅
+plugin:
+  - hexo-generator-feed
+#Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20
+
+## Themes: https://hexo.io/themes/
+#theme: landscape
+#theme: next
+#theme: matery
+theme: butterfly
+# theme: jelly
+
+
+
+# Search 
+search:
+  # path: ./public/search.xml # 索引文件的路径，相对于站点根目录
+  path: search.xml    #  将搜索范围修改成全部
+  field: post # 搜索范围，默认是 post，还可以选择 page、all，设置成 all 表示搜索所有页面
+  format: html
+  limit: 10000 # 限制搜索的条目数
+
+# bilibili追番表
+bangumi:
+  enable: true 
+  vmid: 12764212
+  title: '生命不息，追番不止。'
+  quote: 'NO ANIME, NO LIFE.'
+  show: 1 #初始显示页面：0: 想看 , 1: 在看 , 2: 看过，默认为 1
+  loading: '/img/bangumi-loading.gif'
+
+# 显示live2d
+# live2d:
+#   enable: true
+#   scriptFrom: local # 默认
+#   tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+#   debug: false # 调试, 是否在控制台输出日志
+#   model:
+#     use: live2d-widget-model-violet  #模型选择
+#   display:
+#     position: right   #模型位置
+#     width: 150       #模型宽度
+#     height: 300      #模型高度
+#     hOffset: 33
+#     vOffset: -40
+#   mobile:
+#     show: false      #是否在手机端显示
+
+# 添加aplayer播放器
+#aplayer:
+# meting: true
+# asset_inject: false
+
+
+
+# -----------------------------自己添加的功能--------------------
+
+# 在根目录 _config.yml 文件末尾添加
+encrypt:
+  enable: true
+  kdf:
+    iterations: 600000 # 将这里改为 600000，警告就会消失
+  abstract: "这是一篇加密文章，请输入密码查看。" # 默认摘要
+  message: "请输入密码查看此文章。"            # 输入框提示
+  wrong_pass_message: "密码错误，请重试。"    # 密码错误提示
+
+
+
+# # envelope_comment
+# # see https://akilar.top/posts/e2d3c450/
+# envelope_comment:
+#   enable: true #控制开关
+#   custom_pic:      
+#     cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
+#     line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png #信笺底部图片
+#     beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png # 信封前半部分
+#     afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png # 信封后半部分
+#   message: #信笺正文，多行文本，写法如下
+#     - 有什么想问的？
+#     - 有什么想说的？
+#     - 有什么想吐槽的？
+#     - 哪怕是有什么想吃的，都可以告诉我哦~
+#   bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
+#   height: #1050px，信封划出的高度
+#   path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
+#   front_matter: #【可选】comments页面的 front_matter 配置
+#     title: 留言
+#     comments: true  

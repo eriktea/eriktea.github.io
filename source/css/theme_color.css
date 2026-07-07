@@ -1,0 +1,359 @@
+/* ============================================
+   Unified Theme Color
+   Main accent: #49b1f5 (sky blue)
+   ============================================ */
+
+:root {
+  --btn-hover-color: #49b1f5;
+  --hr-before-color: #49b1f5;
+  --blockquote-bg: rgba(73, 177, 245, 0.08);
+  --blockquote-color: #6a737d;
+  --toc-link-color: #49b1f5;
+  --scrollbar-color: #49b1f5;
+}
+
+[data-theme='dark'] {
+  --btn-hover-color: #49b1f5;
+  --hr-before-color: #49b1f5;
+  --blockquote-bg: rgba(73, 177, 245, 0.08);
+  --toc-link-color: #49b1f5;
+}
+
+/* Blockquote left border accent */
+#article-container blockquote {
+  border-left-color: var(--btn-hover-color);
+}
+
+/* TOC active link */
+#toc .toc-link.active,
+#toc .toc-link:hover {
+  color: var(--btn-hover-color);
+}
+
+/* Pagination buttons */
+.pagination .page-number.current {
+  background: var(--btn-hover-color);
+  border-color: var(--btn-hover-color);
+}
+
+.pagination a:hover {
+  background: var(--btn-hover-color);
+  border-color: var(--btn-hover-color);
+}
+
+/* Tag links hover */
+.tag-cloud a:hover {
+  color: var(--btn-hover-color) !important;
+}
+
+/* Social icons hover in sidebar */
+#sidebar-menus .social-icon:hover {
+  color: var(--btn-hover-color);
+}
+
+/* Card info button */
+#card-info-btn:hover {
+  background: var(--btn-hover-color);
+  border-color: var(--btn-hover-color);
+}
+
+/* Reading progress bar */
+#rightside > button#go-up .scroll-percent {
+  color: var(--btn-hover-color);
+}
+
+/* ============================================
+   Back-to-top button restyling
+   Pill shape + glassmorphism + hover lift
+   ============================================ */
+
+#rightside > button#go-up {
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(153, 153, 153, 0.1) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] #rightside > button#go-up {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #666 !important;
+}
+
+[data-theme='dark'] #rightside > button#go-up {
+  background: rgba(30, 30, 30, 0.85) !important;
+  color: #bbb !important;
+}
+
+#rightside > button#go-up:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(73, 177, 245, 0.3) !important;
+  box-shadow: 0 6px 20px rgba(73, 177, 245, 0.2) !important;
+  background: var(--btn-hover-color) !important;
+  color: #fff !important;
+}
+
+/* ============================================
+   Custom Scrollbar (全页面)
+   ============================================ */
+
+/* Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(153, 153, 153, 0.25);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--btn-hover-color, #49b1f5);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: var(--btn-hover-color, #49b1f5);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(153, 153, 153, 0.25) transparent;
+}
+
+[data-theme='dark'] * {
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+}
+
+/* ============================================
+   Search Dialog Beautification
+   圆角 + 毛玻璃 + focus 天际蓝边框
+   ============================================ */
+
+.search-dialog {
+  border-radius: 16px !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(153, 153, 153, 0.1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme='light'] .search-dialog {
+  background: rgba(255, 255, 255, 0.92) !important;
+}
+
+[data-theme='dark'] .search-dialog {
+  background: rgba(24, 24, 24, 0.92) !important;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+#local-search .search-dialog .local-search-box input {
+  border-radius: 40px !important;
+  border: 2px solid rgba(153, 153, 153, 0.2) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  transition: all 0.3s ease !important;
+  padding: 8px 20px !important;
+}
+
+[data-theme='dark'] #local-search .search-dialog .local-search-box input {
+  background: rgba(40, 40, 40, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  color: #ddd !important;
+}
+
+#local-search .search-dialog .local-search-box input:focus {
+  border-color: var(--btn-hover-color) !important;
+  box-shadow: 0 0 0 3px rgba(73, 177, 245, 0.15) !important;
+  outline: none;
+}
+
+#search-mask {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Search result items */
+#local-search .local-search-hit-item {
+  border-radius: 10px;
+  padding: 10px 16px;
+  transition: all 0.25s ease;
+  margin-bottom: 6px;
+}
+
+[data-theme='light'] #local-search .local-search-hit-item:hover {
+  background: rgba(73, 177, 245, 0.06);
+}
+
+[data-theme='dark'] #local-search .local-search-hit-item:hover {
+  background: rgba(73, 177, 245, 0.1);
+}
+
+#local-search .local-search-hit-item a {
+  color: var(--btn-hover-color);
+  font-weight: 500;
+}
+
+/* ============================================
+   Page Transition (PJAX fade)
+   ============================================ */
+
+#body-wrap {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+body.pjax-loading #body-wrap {
+  opacity: 0.3;
+}
+
+/* ============================================
+   Archive/Category page card beautification
+   ============================================ */
+
+#archive .archive-wrapper,
+#archive .archive-card {
+  border-radius: 14px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+[data-theme='light'] #archive .archive-wrapper,
+[data-theme='light'] #archive .archive-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] #archive .archive-wrapper,
+[data-theme='dark'] #archive .archive-card {
+  background: rgba(18, 18, 18, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#archive .archive-wrapper:hover,
+#archive .archive-card:hover {
+  border-color: rgba(73, 177, 245, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] #archive .archive-wrapper:hover,
+[data-theme='dark'] #archive .archive-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Category page cards */
+#category .category-item,
+.category-item {
+  border-radius: 14px;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='light'] #category .category-item,
+[data-theme='light'] .category-item {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] #category .category-item,
+[data-theme='dark'] .category-item {
+  background: rgba(18, 18, 18, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#category .category-item:hover,
+.category-item:hover {
+  border-color: rgba(73, 177, 245, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme='dark'] #category .category-item:hover,
+[data-theme='dark'] .category-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   Go-up button scroll show/hide animation
+   ============================================ */
+
+#rightside {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#rightside.rightside-show {
+  opacity: 0.8 !important;
+  transform: translate(-58px, 0) !important;
+}
+
+/* Smooth hide when scrolling down */
+#rightside:not(.rightside-show) {
+  opacity: 0 !important;
+  transform: translate(-58px, 10px) !important;
+}
+
+/* ============================================
+   Dark mode sidebar enhancement
+   Stronger glassmorphism in dark mode
+   ============================================ */
+
+[data-theme='dark'] #aside-content .card-widget {
+  background: rgba(20, 20, 20, 0.82) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme='dark'] #aside-content .card-widget:hover {
+  border-color: rgba(73, 177, 245, 0.25) !important;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* ============================================
+   Back-to-top button restyling
+   Pill shape + glassmorphism + hover lift
+   ============================================ */
+
+#rightside > button#go-up {
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(153, 153, 153, 0.1) !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] #rightside > button#go-up {
+  background: rgba(255, 255, 255, 0.85) !important;
+  color: #666 !important;
+}
+
+[data-theme='dark'] #rightside > button#go-up {
+  background: rgba(30, 30, 30, 0.85) !important;
+  color: #bbb !important;
+}
+
+#rightside > button#go-up:hover {
+  transform: translateY(-3px) !important;
+  border-color: rgba(73, 177, 245, 0.3) !important;
+  box-shadow: 0 6px 20px rgba(73, 177, 245, 0.2) !important;
+  background: var(--btn-hover-color) !important;
+  color: #fff !important;
+}

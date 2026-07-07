@@ -1,0 +1,208 @@
+/* ============================================
+   Friend Links Page Beautification
+   Card grid with glassmorphism
+   ============================================ */
+
+/* --- Flink section --- */
+#article-container .flink {
+  margin-bottom: 20px;
+}
+
+/* Category heading */
+#article-container .flink h2 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 36px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(73, 177, 245, 0.15);
+  color: var(--text-highlight-color, #333);
+}
+
+#article-container .flink h2:first-child {
+  margin-top: 0;
+}
+
+[data-theme='dark'] #article-container .flink h2 {
+  border-bottom-color: rgba(73, 177, 245, 0.2);
+}
+
+#article-container .flink h2 .headerlink {
+  display: none;
+}
+
+/* Category description */
+#article-container .flink-desc {
+  font-size: 0.85em;
+  color: #888;
+  margin-bottom: 16px;
+  margin-top: -8px;
+}
+
+[data-theme='dark'] #article-container .flink-desc {
+  color: #999;
+}
+
+/* --- Card grid --- */
+#article-container .flink-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  overflow: visible !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+/* --- Individual card --- */
+#article-container .flink-list-item {
+  position: relative;
+  float: none !important;
+  overflow: hidden;
+  margin: 0 !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 14px !important;
+  line-height: 1.5 !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(153, 153, 153, 0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 !important;
+}
+
+[data-theme='light'] #article-container .flink-list-item {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] #article-container .flink-list-item {
+  background: rgba(18, 18, 18, 0.72);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+#article-container .flink-list-item:hover {
+  border-color: rgba(73, 177, 245, 0.25) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] #article-container .flink-list-item:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  border-color: rgba(73, 177, 245, 0.3) !important;
+}
+
+/* Remove the default hover scale effect on the pseudo element */
+#article-container .flink-list-item::before {
+  display: none !important;
+}
+
+/* --- Card inner layout --- */
+#article-container .flink-list-item a {
+  display: flex !important;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px !important;
+  color: var(--font-color) !important;
+  text-decoration: none;
+}
+
+/* --- Avatar --- */
+#article-container .flink-item-icon {
+  float: none !important;
+  overflow: hidden;
+  margin: 0 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 12px !important;
+  transition: transform 0.35s ease !important;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#article-container .flink-list-item:hover .flink-item-icon {
+  transform: scale(1.08) rotate(-3deg) !important;
+  margin-left: 0 !important;
+  width: 48px !important;
+}
+
+#article-container .flink-item-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
+}
+
+/* --- Text area --- */
+#article-container .flink-item-name {
+  padding: 0 !important;
+  height: auto !important;
+  font-weight: 600 !important;
+  font-size: 0.95em !important;
+  color: var(--text-highlight-color, #333) !important;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-theme='dark'] #article-container .flink-item-name {
+  color: #ddd !important;
+}
+
+#article-container .flink-item-desc {
+  padding: 0 !important;
+  height: auto !important;
+  font-size: 0.78em !important;
+  color: #888 !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+[data-theme='dark'] #article-container .flink-item-desc {
+  color: #777 !important;
+}
+
+/* --- Entrance animation --- */
+#article-container .flink-list-item {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: flinkCardIn 0.45s ease forwards;
+}
+
+@keyframes flinkCardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#article-container .flink-list:nth-child(2) .flink-list-item { animation-delay: 0.03s; }
+#article-container .flink-list:nth-child(3) .flink-list-item { animation-delay: 0.03s; }
+#article-container .flink-list:nth-child(4) .flink-list-item { animation-delay: 0.03s; }
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  #article-container .flink-list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  #article-container .flink-list-item a {
+    padding: 14px 16px !important;
+  }
+
+  #article-container .flink-item-icon {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  #article-container .flink-item-name {
+    font-size: 0.9em !important;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #article-container .flink-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

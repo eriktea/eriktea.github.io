@@ -1,0 +1,39 @@
+- class_name: 友情链接
+  class_desc: 那些人，那些事
+  link_list:
+    - name: 花火の红玉宫
+      link: https://01petard.github.io/
+      avatar: https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/01petard.jpg
+      descr: 每个人都有暗影的一面……
+    - name: 虚位以待
+      link: https://www.google.com/
+      avatar: https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1
+      descr: 虚位以待
+
+# - class_name: 自己在用的网站
+#   class_desc: 长路漫漫……
+#   link_list:
+#     - name: Bilibili
+#       link: https://www.bilibili.com/
+#       avatar: https://play-lh.googleusercontent.com/XSF7pMzahsz4HBYttQhS0LeWFfjcPxaIPdkSmiuud7qKEODAXFeUVct5J7DXdj-ovDc
+#       descr: 平时花时间最多的app
+#     - name: Youtube
+#       link: https://www.youtube.com/
+#       avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
+#       descr: 主要看国外舆论
+#     - name: Twitter
+#       link: https://twitter.com/
+#       avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
+#       descr: 看画师，有时候调查也需要
+
+# - class_name: 自己在用的H资源
+#   class_desc: 就凭爱好
+#   link_list:
+#     - name: Eh里站
+#       link: https://exhentai.org
+#       avatar: https://gitlab.com/uploads/-/system/project/avatar/22907321/ic_launcher-playstore.png
+#       descr: 看本子，找图
+#     - name: 二次元画像詳細検索
+#       link: https://ascii2d.net/
+#       avatar: https://p.e5n.com/up/2018-8/2018830841134374.png
+#       descr: 找二次元的图
